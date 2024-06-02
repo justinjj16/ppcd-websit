@@ -24,9 +24,10 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title="Philadelphia Pentecostal Church of Dallas"
+                paragraph="We are a Bible centered, spirit-filled, Pentecostal church, located in Dallas Metroplex, Texas, USA. Our goal is to minister to each and every person in your family, no matter what age they may be. We have Spirit-anointed worship, teaching, preaching, and other ministries. Our Sunday mornings start with Sunday school. We have classes for adults and children. We are a fellowship of people from all age groups who are connected by relationship with God and one another. We live Spirit led lives as we grow in intimacy with God and minister the love of Christ to others. Our desire is to see our communities touched by Jesus Christ and people experiencing all the blessings God has for them."
                 mb="44px"
+                width="100%"
               />
 
               <div
@@ -35,33 +36,34 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
+                    <List text="The One True God" />
+                    <List text="The Holy Trinity" />
+                    <List text="The Salvation" />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                    <List text="Baptism in Water" />
+                    <List text="The Lord’s Supper" />
+                    <List text="Divine Healing" />
+
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="w-full px-4 lg:w-1/2">
-              <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
+              <div className="relative mx-auto aspect-[25/24] max-w-[600px] lg:mr-0">
                 <Image
-                  src="/images/about/about-image.svg"
+                  src="/images/upcomingEvents/worship.jpeg"
                   alt="about-image"
                   fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0 rounded-3xl"
                 />
                 <Image
-                  src="/images/about/about-image-dark.svg"
+                  src="/images/upcomingEvents/worship.jpeg"
                   alt="about-image"
                   fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
+                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0 rounded-3xl"
                 />
               </div>
             </div>

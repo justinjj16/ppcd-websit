@@ -1,48 +1,73 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
+import RelatedPost from "@/components/Blog/RelatedPost";
+import videoData from './videoData';
 
 import ModalVideo from "react-modal-video";
 
-const Video = () => {
+const Video = ({ videoId, }: { videoId?: string }) => {
+  const usePathName = usePathname();
   const [isOpen, setOpen] = useState(false);
 
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
-        <SectionTitle
-          title="We are ready to help"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
-          center
-          mb="80px"
-        />
-
         <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
-            <div
-              className="mx-auto max-w-[770px] overflow-hidden rounded-md"
-              data-wow-delay=".15s"
-            >
-              <div className="relative aspect-[77/40] items-center justify-center">
-                <Image src="/images/video/video.jpg" alt="video image" fill />
-                <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center">
-                  <button
-                    aria-label="video play button"
-                    onClick={() => setOpen(true)}
-                    className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
-                  >
-                    <svg
-                      width="16"
-                      height="18"
-                      viewBox="0 0 16 18"
-                      className="fill-current"
+          <div className="w-full px-4 flex flex-wrap">
+            <div className="lg:w-3/4 w-full lg:pr-4">
+              <SectionTitle
+                title="Join Us Live"
+                paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+                center
+                mb="80px"
+              />
+              <div
+                className="mx-auto overflow-hidden rounded-md"
+                data-wow-delay=".15s"
+              >
+                <div className="relative aspect-[77/40] items-center justify-center">
+                  <Image src="/images/video/video.jpg" alt="video image" fill />
+                  <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center">
+                    <button
+                      aria-label="video play button"
+                      onClick={() => setOpen(true)}
+                      className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
                     >
-                      <path d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48112 15.5 9.86602L2 17.6603C1.33333 18.0452 0.499999 17.564 0.499999 16.7942L0.5 1.20577C0.5 0.43597 1.33333 -0.0451549 2 0.339745L15.5 8.13397Z" />
-                    </svg>
-                  </button>
+                      <svg
+                        width="16"
+                        height="18"
+                        viewBox="0 0 16 18"
+                        className="fill-current"
+                      >
+                        <path d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48112 15.5 9.86602L2 17.6603C1.33333 18.0452 0.499999 17.564 0.499999 16.7942L0.5 1.20577C0.5 0.43597 1.33333 -0.0451549 2 0.339745L15.5 8.13397Z" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+              </div>
+            </div>
+
+            <div className="lg:w-1/4 w-full lg:pl-4">
+              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-sm bg-white dark:shadow-none">
+                <h3 className="border-b border-body-color border-opacity-10 px-8 py-4 text-lg font-semibold text-black dark:border-white dark:border-opacity-10 dark:text-white">
+                  Related Videos
+                </h3>
+                <ul className="p-8">
+                  {videoData.map(({ title, videoId, date, thumbnail }, index) =>
+                    <li key={index} className="mb-6 border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
+                      <RelatedPost
+                        title={title}
+                        image={thumbnail}
+                        slug={usePathName === '/watch' ? `watch/` + videoId : videoId}
+                        date={date}
+                      />
+                    </li>
+                  )}
+                </ul>
               </div>
             </div>
           </div>
@@ -54,7 +79,7 @@ const Video = () => {
         autoplay={true}
         start={true}
         isOpen={isOpen}
-        videoId="L61p2uyiMSo"
+        videoId={videoId ? videoId : "vQEbX3sVWaU"}
         onClose={() => setOpen(false)}
       />
 

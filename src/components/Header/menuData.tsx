@@ -10,19 +10,32 @@ const menuData: Menu[] = [
   {
     id: 2,
     title: "About",
-    path: "/about",
     newTab: false,
+    submenu: [
+      {
+        id: 41,
+        title: "Who We Are",
+        path: "/about",
+        newTab: false,
+      },
+      {
+        id: 42,
+        title: "Leadership",
+        path: "/leadership",
+        newTab: false,
+      },
+    ]
   },
   {
     id: 33,
-    title: "Blog",
-    path: "/blog",
+    title: "Watch",
+    path: "/watch",
     newTab: false,
   },
   {
     id: 3,
-    title: "Support",
-    path: "/contact",
+    title: "Donate",
+    path: "/donate",
     newTab: false,
   },
   {
