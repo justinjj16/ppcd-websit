@@ -27,7 +27,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  The LORD is my shepherd, I shall not be in want. he restores my soul. He guides me in paths of righteousness for his name's sake.
+                  The LORD is my shepherd, I shall not be in want. he restores my soul. He guides me in paths of righteousness for his name&lsquo;s sake.
                 </p>
                 <div className="flex items-center">
                   <a
