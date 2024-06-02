@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog Details Page | Philadelphia Pentecostal Church of Dallas",
-  description: "This is Blog Details Page for Startup Nextjs Template",
+  description: "Philadelphia Pentecostal Church of Dallas",
   // other metadata
 };
 
@@ -36,7 +36,7 @@ const BlogDetailsPage = () => {
                       </div>
                       <div className="w-full">
                         <span className="mb-1 text-base font-medium text-body-color">
-                          By <span>Musharof Chy</span>
+                          By <span> justin</span>
                         </span>
                       </div>
                     </div>

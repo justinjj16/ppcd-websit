@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact Page | Philadelphia Pentecostal Church of Dallas",
-  description: "This is Contact Page for Startup Nextjs Template",
+  description: "Philadelphia Pentecostal Church of Dallas",
   // other metadata
 };
 
