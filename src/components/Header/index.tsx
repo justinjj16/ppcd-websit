@@ -42,8 +42,8 @@ const Header = () => {
     <>
       <header
         className={`header left-0 top-0 z-40 flex w-full items-center ${sticky
-            ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
-            : "absolute bg-transparent"
+          ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
+          : "absolute bg-transparent"
           }`}
       >
         <div className="container">
@@ -51,26 +51,26 @@ const Header = () => {
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
-                className={`header-logo block w-full ${sticky ? "py-5 lg:py-2" : "py-8"
+                className={`header-logo block w-full ${sticky ? "py-5 lg:py-2" : "pt-4"
                   } `}
               >
                 <Image
                   src="/images/logo/logo-2.svg"
                   alt="logo"
                   width={140}
-                  height={30}
-                  className="w-full dark:hidden"
+                  height={27}
+                  className=" dark:hidden"
                 />
                 <Image
                   src="/images/logo/logo.svg"
                   alt="logo"
                   width={140}
-                  height={30}
-                  className="hidden w-full dark:block"
+                  height={27}
+                  className="hidden dark:block"
                 />
               </Link>
             </div>
-            <div className="flex w-full items-center justify-between px-4">
+            <div className="flex w-full items-center justify-end px-4">
               <div>
                 <button
                   onClick={navbarToggleHandler}
@@ -94,8 +94,8 @@ const Header = () => {
                 <nav
                   id="navbarCollapse"
                   className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${navbarOpen
-                      ? "visibility top-full opacity-100"
-                      : "invisible top-[120%] opacity-0"
+                    ? "visibility top-full opacity-100"
+                    : "invisible top-[120%] opacity-0"
                     }`}
                 >
                   <ul className="block lg:flex lg:space-x-12">
@@ -105,8 +105,8 @@ const Header = () => {
                           <Link
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${usePathName === menuItem.path
-                                ? "text-primary dark:text-white"
-                                : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
+                              ? "text-primary dark:text-white"
+                              : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
                               }`}
                           >
                             {menuItem.title}

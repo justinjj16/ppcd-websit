@@ -100,111 +100,91 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+            <div className="flex flex-row w-full px-4 md:w-1/2 lg:w-8/12 xl:w-6/12 justify-between items-center">
 
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-              <div className="mb-12 lg:mb-16">
-                {/* <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Useful Links
-                </h2> */}
-                <ul>
-                  <li>
-                    <Link
-                      href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      About
+              <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+                <div className="mb-12 lg:mb-16">
+                  <ul>
+                    <li>
+                      <Link
+                        href="/about"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        About
                     </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/watch"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Watch
+                    </li>
+                    <li>
+                      <Link
+                        href="/watch"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        Watch
                     </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/donate"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Donate
+                    </li>
+                    <li>
+                      <Link
+                        href="/donate"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        Donate
                     </Link>
-                  </li>
+                    </li>
 
-                </ul>
+                  </ul>
+                </div>
               </div>
-            </div>
 
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-              <div className="mb-12 lg:mb-16">
-                {/* <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Terms
-                </h2> */}
-                <ul>
-                  <li>
-                    <Link
-                      href="/contact"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Contact
+              <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+                <div className="mb-12 lg:mb-16">
+                  <ul>
+                    <li>
+                      <Link
+                        href="/contact"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        Contact
                     </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Leader
+                    </li>
+                    <li>
+                      <Link
+                        href="/"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        Leader
                     </Link>
-                  </li>
-                  {/* <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Refund Policy
-                    </Link>
-                  </li> */}
-                </ul>
-              </div>
-            </div>
+                    </li>
 
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
-              <div className="mb-12 lg:mb-16">
-                {/* <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Support & Help
-                </h2> */}
-                <ul>
-                  <li>
-                    <Link
-                      href="/contact"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Contact
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/blog-sidebar"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Article
-                    </Link>
-                  </li>
-                  {/* <li>
-                    <Link
-                      href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      About
-                    </Link>
-                  </li> */}
-                </ul>
+                  </ul>
+                </div>
               </div>
+
+              <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+                <div className="mb-12 lg:mb-16">
+
+                  <ul>
+                    <li>
+                      <Link
+                        href="/contact"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        Contact
+                    </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/blog-sidebar"
+                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      >
+                        Article
+                    </Link>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+
             </div>
           </div>
-
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-4">
             <p className="text-center text-base text-body-color dark:text-white">

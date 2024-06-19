@@ -3,12 +3,12 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Error Page | Philadelphia Pentecostal Church of Dallas",
+  title: "404 Not found | Philadelphia Pentecostal Church of Dallas",
   description: "Philadelphia Pentecostal Church of Dallas",
   // other metadata
 };
 
-const ErrorPage = () => {
+const NotFound = () => {
   return (
     <>
       <section className="relative z-10 pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
@@ -535,4 +535,4 @@ const ErrorPage = () => {
   );
 };
 
-export default ErrorPage;
+export default NotFound;
