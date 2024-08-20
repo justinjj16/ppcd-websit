@@ -172,7 +172,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        href="/blog-sidebar"
+                        href="/articles"
                         className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                       >
                         Article

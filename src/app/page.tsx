@@ -1,14 +1,10 @@
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Blog from "@/components/Blog";
-import Brands from "@/components/Brands";
-import ScrollUp from "@/components/Common/ScrollUp";
-import Contact from "@/components/Contact";
-import Features from "@/components/Features";
-import Hero from "@/components/Hero";
 
-import Testimonials from "@/components/Testimonials";
-import Video from "@/components/Video";
+import ScrollUp from "@/components/Common/ScrollUp";
+import UpCommingEvents from "@/components/UpCommingEvents";
+import HomeHeading from "@/components/HomeHeading";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,21 +16,13 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+
       <ScrollUp />
-      <Hero />
-      <Features />
+
+      <HomeHeading />
+      <UpCommingEvents />
       <AboutSectionOne />
       <AboutSectionTwo />
-
-
-      {/* <Video />
-      <Brands /> */}
-
-
-      {/* <Testimonials />
-      <Pricing />
-      <Blog /> */}
-      {/* <Contact /> */}
     </>
   );
 }

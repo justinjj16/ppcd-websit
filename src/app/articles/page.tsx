@@ -1,32 +1,35 @@
-import SingleBlog from "@/components/Blog/SingleBlog";
-import blogData from "@/components/Blog/blogData";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import SingleArticle from "@/components/Articles/SingleArticle";
+import articleData from "@/components/Articles/ArticleData";
+import SectionTitle from "@/components/Common/SectionTitle";
+
 
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Page | Philadelphia Pentecostal Church of Dallas",
+  title: "Article Page | Philadelphia Pentecostal Church of Dallas",
   description: "Philadelphia Pentecostal Church of Dallas",
   // other metadata
 };
 
-const Blog = () => {
+const Articles = () => {
   return (
     <>
-      <Breadcrumb
-        pageName="Blog Grid"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-      />
 
       <section className="pb-[120px] pt-[120px]">
         <div className="container">
+          <SectionTitle
+            title="Articles"
+            paragraph="O come, let us worship and bow down: let us kneel before the Lord our maker."
+            center
+            mb="80px"
+          />
           <div className="-mx-4 flex flex-wrap justify-center">
-            {blogData.map((blog) => (
+            {articleData.map((article) => (
               <div
-                key={blog.id}
+                key={article.id}
                 className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
               >
-                <SingleBlog blog={blog} />
+                <SingleArticle article={article} />
               </div>
             ))}
           </div>
@@ -96,4 +99,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Articles;

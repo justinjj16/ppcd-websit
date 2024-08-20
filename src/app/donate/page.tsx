@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 const Donate = () => {
   return (
     <>
+      <div className="pt-16"></div>
       <Give />
     </>
   );

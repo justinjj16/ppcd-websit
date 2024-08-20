@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
-const Header = () => {
+const Header = ({ isLiveNotification }: { isLiveNotification: boolean }) => {
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
@@ -41,7 +41,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header left-0 top-0 z-40 flex w-full items-center ${sticky
+        className={`header left-0 ${isLiveNotification && !sticky ? 'top-30' : 'top-0'} z-40 flex w-full items-center ${sticky
           ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
           : "absolute bg-transparent"
           }`}

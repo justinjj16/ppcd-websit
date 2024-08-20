@@ -4,12 +4,14 @@ const SectionTitle = ({
   width = "570px",
   center,
   mb = "100px",
+  children
 }: {
   title: string;
-  paragraph: string;
+  paragraph?: string;
   width?: string;
   center?: boolean;
   mb?: string;
+  children?: React.ReactNode
 }) => {
   return (
     <>
@@ -23,6 +25,7 @@ const SectionTitle = ({
         <p className="text-base !leading-relaxed text-body-color md:text-lg">
           {paragraph}
         </p>
+        {children}
       </div>
     </>
   );

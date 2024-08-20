@@ -1,7 +1,7 @@
-// import Video from "@/components/Video/index";
-import dynamic from 'next/dynamic'
-
+import dynamic from 'next/dynamic';
 import { Metadata } from "next";
+
+import { liveVideoData } from '../../components/Video/videoData';
 
 const Video = dynamic(() => import('../../components/Video/index'), { ssr: false })
 
@@ -16,7 +16,7 @@ const WatchPage = () => {
   return (
     <>
       <div className="pt-16"></div>
-      <Video videoId='' />
+      <Video selectedVideo={liveVideoData[0]} />
     </>
   );
 };

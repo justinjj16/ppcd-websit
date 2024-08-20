@@ -15,7 +15,7 @@ const Hero = () => {
                   Philadelphia Pentecostal Church of Dallas
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  We believe in pursuing the glory of God by the power of His Spirit grounded in the Word of God. Service is on Sunday mornings at 9:15 AM
+                  We believe in pursuing the glory of God by the power of His Spirit grounded in the Word of God. Service is on Sunday mornings at 9:30 AM
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link

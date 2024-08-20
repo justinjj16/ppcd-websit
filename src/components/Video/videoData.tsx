@@ -1,42 +1,58 @@
-import { Video } from "@/types/video";
+import { VideoType } from "@/types/video";
 
-const videoData: Video[] = [
+const liveVideoData: VideoType[] = [
   {
-    videoId: 'vQEbX3sVWaU',
-    title: "Best way to boost your online sales.",
-    date: '12 Feb 2025',
-    thumbnail: '/images/blog/post-01.jpg'
+    videoId: '7__ETSceOXo',
+    isLive: true,
+    title: "Sunday Worship",
+    date: 'Aug 18, 2024',
+    thumbnail: '/images/article/post-01.jpg'
+  },
+];
+
+const videoData: VideoType[] = [
+  {
+    videoId: 'G7KbqkqyV1g',
+    isLive: true,
+    title: "Sunday Worship",
+    date: 'July 14 2024',
+    thumbnail: '/images/article/post-01.jpg'
   },
   {
-    videoId: 'SeowA8Qwkzk',
-    title: "The 8 best landing page builders, reviewed",
-    date: '15 Feb, 2024',
-    thumbnail: '/images/blog/post-01.jpg'
+    videoId: '9RKFsPvMzME',
+    isLive: true,
+    title: "Sunday Worship",
+    date: 'June 23, 2024',
+    thumbnail: '/images/article/post-01.jpg'
   },
   {
-    videoId: 'CxsxtuVLwug',
-    title: "50 Best web design tips & tricks that will help you.",
-    date: '12 Feb 2025',
-    thumbnail: '/images/blog/post-01.jpg'
+    videoId: 'ozY1MsuSdyw',
+    isLive: true,
+    title: "Sunday Worship",
+    date: 'May 26, 2024',
+    thumbnail: '/images/article/post-01.jpg'
   },
   {
-    videoId: 'koh-FryEf5c',
-    title: "Best way to boost your online sales.",
-    date: '12 Feb 2025',
-    thumbnail: '/images/blog/post-01.jpg'
+    videoId: '8BuexLGHpY4',
+    isLive: true,
+    title: "Sunday Worship",
+    date: 'May 19, 2024',
+    thumbnail: '/images/article/post-01.jpg'
   },
   {
-    videoId: 'OBO0UlGWSKc',
-    title: "50 Best web design tips & tricks that will help you.",
-    date: '12 Feb 2025',
-    thumbnail: '/images/blog/post-01.jpg'
+    videoId: 'DdPWrMf8EbM',
+    isLive: true,
+    title: "Sunday Worship",
+    date: 'May 12, 2024',
+    thumbnail: '/images/article/post-01.jpg'
   },
   {
-    videoId: 'vQEbX3sVWaU',
-    title: "Huston ",
-    date: '12 Feb 2025',
-    thumbnail: '/images/blog/post-01.jpg'
+    videoId: 'ym_Ympeh5_0',
+    isLive: true,
+    title: "Sunday Worship ",
+    date: 'May 5, 2024',
+    thumbnail: '/images/article/post-01.jpg'
   },
 
 ];
-export default videoData;
+export { videoData, liveVideoData };
