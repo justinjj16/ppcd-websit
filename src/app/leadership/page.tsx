@@ -70,7 +70,7 @@ const Leadership = () => {
         <div className="w-full h-52 lg:h-96 relative text-white text-center mb-10">
           <Image
             src="/images/leadership/group.jpeg"
-            alt="logo"
+            alt="leadership"
             className="w-full h-full absolute top-0 left-0"
             fill
 

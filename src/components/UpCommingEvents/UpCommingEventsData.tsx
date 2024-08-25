@@ -4,7 +4,7 @@ import { NextDay, GetFirstNextFirstTuesday } from '@/utility/date';
 const upCommingEventsData: UpCommingEvent[] = [
   {
     id: 1,
-    icon: "/images/upcomingEvents/worship.jpeg",
+    icon: "/images/upcomingEvents/worship.jpg",
     title: "Sunday Service",
     paragraph: "Every Sunday at 9:30am",
     nextDate: NextDay(0),
@@ -18,7 +18,7 @@ const upCommingEventsData: UpCommingEvent[] = [
   },
   {
     id: 2,
-    icon: "/images/upcomingEvents/worship.jpeg",
+    icon: "/images/upcomingEvents/bible.jpg",
     title: "Bible Study",
     paragraph: "Every Wednesday at 8:00pm",
     nextDate: NextDay(4),
@@ -26,7 +26,7 @@ const upCommingEventsData: UpCommingEvent[] = [
   },
   {
     id: 3,
-    icon: "/images/upcomingEvents/worship.jpeg",
+    icon: "/images/upcomingEvents/intercessory.jpg",
     title: "Intercessory Prayer",
     paragraph:
       "Every Friday at 08:00pm",
@@ -35,7 +35,7 @@ const upCommingEventsData: UpCommingEvent[] = [
   },
   {
     id: 4,
-    icon: "/images/upcomingEvents/worship.jpeg",
+    icon: "/images/upcomingEvents/sisters.jpg",
     title: "Sisters Meeting",
     paragraph: "Every Friday at 08:00pm",
     nextDate: NextDay(6),
@@ -43,7 +43,7 @@ const upCommingEventsData: UpCommingEvent[] = [
   },
   {
     id: 5,
-    icon: "/images/upcomingEvents/worship.jpeg",
+    icon: "/images/upcomingEvents/cottage.jpg",
     title: "Cottage Meeting",
     paragraph: "Every Saturday at 07:30pm",
     nextDate: NextDay(7),
@@ -51,7 +51,7 @@ const upCommingEventsData: UpCommingEvent[] = [
   },
   {
     id: 6,
-    icon: "/images/upcomingEvents/worship.jpeg",
+    icon: "/images/upcomingEvents/outreach.jpg",
     title: "Community Outreach",
     paragraph: "First Saturday at 10:30am",
     nextDate: GetFirstNextFirstTuesday(6),

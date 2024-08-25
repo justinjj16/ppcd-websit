@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Image from "next/image";
 import { UpCommingEvent } from '@/types/upCommingEvent';
 // Modal.setAppElement('#home');
@@ -7,7 +7,18 @@ const ChurchModal = ({ event, onClose }: { event: UpCommingEvent, onClose: () =>
 
   const [isMoredetails, setIsMoreDetails] = useState(false)
 
-  { console.log("event", event) }
+  const wrapperRef = useRef(null);
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside, false);
+    return () => {
+      document.removeEventListener("click", handleClickOutside, false);
+    };
+  }, []);
+  const handleClickOutside = event => {
+    if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+      onClose();
+    }
+  };
 
   return (
     <>
@@ -46,7 +57,7 @@ const ChurchModal = ({ event, onClose }: { event: UpCommingEvent, onClose: () =>
                 </div>
               </div>
             </div> */}
-            <div className="bg-white dark:bg-gray-dark p-2 rounded-2xl sm:w-1/3 w-full">
+            <div ref={wrapperRef} className="bg-white dark:bg-gray-dark p-2 rounded-2xl sm:w-1/3 w-full">
               <div className=''>
                 <Image
                   src={event.icon}
@@ -54,7 +65,7 @@ const ChurchModal = ({ event, onClose }: { event: UpCommingEvent, onClose: () =>
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-full h-auto rounded-3xl comming-event-image transition ease-in-out delay-300 duration-300 "
+                  className="w-full h-auto sm:h-80 rounded-3xl comming-event-image transition ease-in-out delay-300 duration-300 "
                   loading="lazy"
                 />
               </div>
@@ -81,7 +92,7 @@ const ChurchModal = ({ event, onClose }: { event: UpCommingEvent, onClose: () =>
               )}
 
               <div>
-                <button onClick={onClose} className="p-2 rounded-sm font-medium hover:border-b-2 ">Close</button>
+                <button onClick={onClose} className="p-2 rounded-sm font-medium hover:border-b-2 hover:border-b-body-color border-b-transparent border-b-2">Close</button>
               </div>
             </div>
           </div>

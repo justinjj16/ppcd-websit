@@ -54,7 +54,7 @@ const Header = ({ isLiveNotification }: { isLiveNotification: boolean }) => {
                 className={`header-logo block w-full ${sticky ? "py-5 lg:py-2" : "pt-4"
                   } `}
               >
-                <Image
+                {/* <Image
                   src="/images/logo/logo-2.svg"
                   alt="logo"
                   width={140}
@@ -67,7 +67,9 @@ const Header = ({ isLiveNotification }: { isLiveNotification: boolean }) => {
                   width={140}
                   height={27}
                   className="hidden dark:block"
-                />
+                /> */}
+                <h2 className="tracking-widest text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[45px]">PPCD</h2>
+                <h6 className="tracking-widest text-sm font-bold text-black dark:text-white sm:text-4xl md:text-[27px]">CHURCH</h6>
               </Link>
             </div>
             <div className="flex w-full items-center justify-end px-4">

@@ -2,15 +2,23 @@ import { VideoType } from "@/types/video";
 
 const liveVideoData: VideoType[] = [
   {
-    videoId: '7__ETSceOXo',
+    videoId: 'FXz3wkHCGJo',
     isLive: true,
-    title: "Sunday Worship",
-    date: 'Aug 18, 2024',
+    title: "Sunday Worship | Be A Barnabas | Part 2",
+    date: 'Aug 25, 2024',
     thumbnail: '/images/article/post-01.jpg'
   },
 ];
 
+
 const videoData: VideoType[] = [
+  {
+    videoId: '7__ETSceOXo',
+    isLive: true,
+    title: "Sunday Worship | Be A Barnabas | Part 1",
+    date: 'Aug 18, 2024',
+    thumbnail: '/images/article/post-01.jpg'
+  },
   {
     videoId: 'G7KbqkqyV1g',
     isLive: true,

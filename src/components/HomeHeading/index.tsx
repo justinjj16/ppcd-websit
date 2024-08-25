@@ -18,12 +18,13 @@ const Hero = () => {
                   We believe in pursuing the glory of God by the power of His Spirit grounded in the Word of God. Service is on Sunday mornings at 9:30 AM
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <Link
+                  {/* <Link
                     href="/contact"
                     className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   >
                     Service Time + Locations
-                  </Link>
+                  </Link> */}
+                  <span className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5">Service Time + Locations</span>
                 </div>
               </div>
             </div>

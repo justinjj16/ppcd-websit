@@ -8,15 +8,15 @@ const SingleUpCommingEvent = ({ upCommingEvent, eventShowHandler }: { upCommingE
   const { icon, title, paragraph } = upCommingEvent;
   return (
     <div className="w-full">
-      <button onClick={() => eventShowHandler(upCommingEvent)} className="wow fadeInUp comming-event-container cursor-pointer" data-wow-delay=".15s">
-        <div className="mb-2 flex items-center justify-center rounded-3xl bg-primary bg-opacity-10 text-primary">
+      <button onClick={() => eventShowHandler(upCommingEvent)} className="w-full wow fadeInUp comming-event-container cursor-pointer" data-wow-delay=".15s">
+        <div className="w-full mb-2 flex items-center justify-center rounded-3xl bg-primary bg-opacity-10 text-primary">
           <Image
             src={icon}
             alt="author"
             width="0"
             height="0"
             sizes="100vw"
-            className="w-full h-auto rounded-3xl comming-event-image transition ease-in-out delay-300 duration-300 "
+            className="w-full h-64 rounded-3xl comming-event-image transition ease-in-out delay-300 duration-300 "
             loading="lazy"
           />
         </div>

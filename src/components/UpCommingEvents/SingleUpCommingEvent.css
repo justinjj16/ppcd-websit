@@ -1,3 +1,8 @@
-.comming-event-container:hover .comming-event-image{
-  transform: scale(1.1);
+
+
+@media screen and (min-width: 768px) {
+  .comming-event-container:hover .comming-event-image{
+  
+    transform: scale(1.1);
+  }
 }
