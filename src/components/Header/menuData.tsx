@@ -24,6 +24,19 @@ const menuData: Menu[] = [
         path: "/leadership",
         newTab: false,
       },
+      {
+        id: 43,
+        title: "Vision",
+        path: "/vision",
+        newTab: false,
+      },
+      {
+        id: 44,
+        title: "Believe",
+        path: "/believe",
+        newTab: false,
+      },
+
     ]
   },
   {
@@ -34,8 +47,8 @@ const menuData: Menu[] = [
   },
   {
     id: 3,
-    title: "Donate",
-    path: "/donate",
+    title: "Give",
+    path: "/give",
     newTab: false,
   },
   {

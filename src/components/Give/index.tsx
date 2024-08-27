@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
-import OfferList from "./OfferList";
+// import OfferList from "./OfferList";
 import InfoBox from "./InfoBox";
 
-const Give = () => {
+const GiveComponent = () => {
   const [isZelle, setIsZelle] = useState(true);
 
   return (
@@ -120,4 +120,4 @@ const Give = () => {
   );
 };
 
-export default Give;
+export default GiveComponent;

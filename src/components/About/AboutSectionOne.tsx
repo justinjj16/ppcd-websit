@@ -31,7 +31,7 @@ const AboutSectionOne = () => {
                 <div className="text-base !leading-relaxed text-body-color md:text-lg">
                   <div className="py-2">We welcome you to Philadelphia Pentecostal Church of Dallas! </div>
                   <p className="py-2">We are a Bible-based and family oriented church where you can be exposed to God’s Word, share in fellowship among believers, and grow in the grace and knowledge of Jesus Christ</p>
-                  <p className="py-2">If you&lsquo;re looking for a place to belong or have been searching for answers to life&lsquo;s questions, you&lsquo;ve come to the right place. We welcome you to join us in worship. At Philadelphia Pentecostal Church of Dallas, you&lsquo;ll find a variety of opportunities to help you grow in the Lord, form strong, healthy relationships, and find direction for your life. You&lsquo;ll find that we give great importance to the learning of the Word.  We have Sunday School classes for both the adults youngsters and kids. We have such a wonderful and talented dynamic praise and worship team. Our goal is to minister to each and every person in your family, no matter what age they may be. </p>
+                  <p className="py-2">If you&lsquo;re looking for a place to belong or have been searching for answers to life&lsquo;s questions, you&lsquo;ve come to the right place. We welcome you to join us in worship. At Philadelphia Pentecostal Church of Dallas, you&lsquo;ll find a variety of opportunities to help you grow in the Lord, form strong, healthy relationships, and find direction for your life. You&lsquo;ll find that we give great importance to the learning of the Word.  We have Sunday School classes for both the adults, youngsters and kids. We have such a wonderful and talented dynamic praise and worship team. Our goal is to minister to each and every person in your family, no matter what age they may be. </p>
                   <p className="py-2">We have been in existence in Garland, TX since 1996 and it is our desire to serve the community faithfully and lift up His Name. Thank You for taking the time to visit us online. Our website is designed to help you acquaint yourself with the many ministries and services that are catered to the needs of your family and community. We would like to welcome you to visit any of our services. We are conveniently located at <strong>2915 Broadway Blvd, Garland, TX. </strong></p>
                   <p className="py-2">We would love to have you come and worship the Lord with us. Come and be blessed! </p>
                 </div>
@@ -66,12 +66,6 @@ const AboutSectionOne = () => {
                   fill
                   className="mx-auto max-w-full drop-shadow-three lg:mr-0 rounded-3xl"
                 />
-                {/* <Image
-                  src="/images/upcomingEvents/cross.jpg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0 rounded-3xl"
-                /> */}
               </div>
             </div>
           </div>
