@@ -12,9 +12,10 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const ArticleDetailsPage = ({ params, }: { params: { articleid: string } }) => {
-
-  const currentArticle = articleData.find((article) => article.id === params.articleid)
+const ArticleDetailsPage = ({ params }: { params: { articleid: string } }) => {
+  const currentArticle = articleData.find(
+    (article) => article.id === params.articleid,
+  );
 
   return (
     <>
@@ -69,7 +70,7 @@ const ArticleDetailsPage = ({ params, }: { params: { articleid: string } }) => {
                         </p>
                       </div>
                     </div>
-                    <div className="mb-5 gap-2 flex">
+                    <div className="mb-5 flex gap-2">
                       {currentArticle.tags.map((tag) => (
                         <span
                           key={tag}
@@ -78,13 +79,11 @@ const ArticleDetailsPage = ({ params, }: { params: { articleid: string } }) => {
                           {tag}
                         </span>
                       ))}
-
                     </div>
                   </div>
                   {currentArticle.content}
 
                   <div className="items-center justify-between sm:flex">
-
                     <div className="mb-5">
                       <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right">
                         Share this post :
@@ -98,8 +97,9 @@ const ArticleDetailsPage = ({ params, }: { params: { articleid: string } }) => {
               </div>
             </div>
           </div>
-        ) : ''}
-
+        ) : (
+          ""
+        )}
       </section>
     </>
   );

@@ -4,14 +4,14 @@ const SectionTitle = ({
   width = "570px",
   center,
   mb = "100px",
-  children
+  children,
 }: {
   title: string;
   paragraph?: string;
   width?: string;
   center?: boolean;
   mb?: string;
-  children?: React.ReactNode
+  children?: React.ReactNode;
 }) => {
   return (
     <>

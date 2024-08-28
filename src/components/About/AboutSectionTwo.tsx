@@ -7,20 +7,20 @@ const AboutSectionTwo = () => {
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-1/2">
             <div
-              className="relative mx-auto mb-12 aspect-[25/24] max-w-[600px] text-center lg:m-0"
+              className="relative mx-auto mb-12 hidden aspect-[25/24] max-w-[600px] text-center sm:block lg:m-0"
               data-wow-delay=".15s"
             >
               <Image
                 src="/images/upcomingEvents/worship.jpg"
                 alt="about image"
                 fill
-                className="drop-shadow-three dark:hidden dark:drop-shadow-none rounded-3xl"
+                className="rounded-3xl drop-shadow-three dark:hidden dark:drop-shadow-none"
               />
               <Image
                 src="/images/upcomingEvents/worship.jpg"
                 alt="about image"
                 fill
-                className="hidden drop-shadow-three dark:block dark:drop-shadow-none rounded-3xl"
+                className="hidden rounded-3xl drop-shadow-three dark:block dark:drop-shadow-none"
               />
             </div>
           </div>
@@ -31,7 +31,10 @@ const AboutSectionTwo = () => {
                   The One True God
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  The one true God has revealed Himself as the eternally self-existent, self-revealed “I AM”, and has further revealed Himself as embodying the principles of relationship and association of the Trinity as Father, Son, and Holy Ghost.
+                  The one true God has revealed Himself as the eternally
+                  self-existent, self-revealed “I AM”, and has further revealed
+                  Himself as embodying the principles of relationship and
+                  association of the Trinity as Father, Son, and Holy Ghost.
                 </p>
               </div>
               <div className="mb-9">
@@ -39,7 +42,12 @@ const AboutSectionTwo = () => {
                   Baptism in Water
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  The ordinance of baptism by a burial with Christ should be observed as commanded in the Scriptures by all who have really repented and in their hearts have truly believed in Christ as Savior and Lord. In doing so, they declare to the world that they have died with Jesus and that they have also been raised with Him to walk in the newness of life.
+                  The ordinance of baptism by a burial with Christ should be
+                  observed as commanded in the Scriptures by all who have really
+                  repented and in their hearts have truly believed in Christ as
+                  Savior and Lord. In doing so, they declare to the world that
+                  they have died with Jesus and that they have also been raised
+                  with Him to walk in the newness of life.
                 </p>
               </div>
               <div className="mb-1">
@@ -47,7 +55,10 @@ const AboutSectionTwo = () => {
                   The Lord’s Supper
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  The Lord’s Supper, consisting of the elements bread and the fruit of the vine, is a memorial of His suffering and death and a prophecy of His Second Coming. It is enjoined on all believers “until He comes”.
+                  The Lord’s Supper, consisting of the elements bread and the
+                  fruit of the vine, is a memorial of His suffering and death
+                  and a prophecy of His Second Coming. It is enjoined on all
+                  believers “until He comes”.
                 </p>
               </div>
             </div>

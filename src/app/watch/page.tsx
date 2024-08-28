@@ -1,10 +1,11 @@
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 import { Metadata } from "next";
 
-import { liveVideoData } from '../../components/Video/videoData';
+import { liveVideoData } from "../../components/Video/videoData";
 
-const Video = dynamic(() => import('../../components/Video/index'), { ssr: false })
-
+const Video = dynamic(() => import("../../components/Video/index"), {
+  ssr: false,
+});
 
 export const metadata: Metadata = {
   title: "watch Page | Philadelphia Pentecostal Church of Dallas",

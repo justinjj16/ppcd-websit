@@ -14,21 +14,27 @@ const Hero = () => {
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                   Philadelphia Pentecostal Church of Dallas
                 </h1>
-                <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-2xl md:leading-tight">2915 Broadway Blvd, Garland, TX</h3>
+                <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-2xl md:leading-tight">
+                  2915 Broadway Blvd, Garland, TX
+                </h3>
 
-
-                <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-4 md:p-4 lg:p-6 xl:p-8 shadow-submit">
-                  <div className="sm:grid sm:grid-cols-2 gap-4 items-center">
+                <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-4 shadow-submit md:p-4 lg:p-6 xl:p-8">
+                  <div className="items-center gap-4 sm:grid sm:grid-cols-2">
                     <div>
                       <p className="text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                         Sunday Service
-                </p>
+                      </p>
                     </div>
                     <div className="flex flex-col sm:items-start">
-                      <p className="text-center text-base font-medium italic text-body-color">9:30am - 10:45am Malayalam Worship</p>
-                      <p className="text-center text-base font-medium italic text-body-color">10:00am - 10:45 Sunday School</p>
-                      <p className="text-center text-base font-medium italic text-body-color">10:45am - 12:00pm English Worship</p>
-
+                      <p className="text-center text-base font-medium italic text-body-color">
+                        9:30am - 10:45am Malayalam Worship
+                      </p>
+                      <p className="text-center text-base font-medium italic text-body-color">
+                        10:00am - 10:45 Sunday School
+                      </p>
+                      <p className="text-center text-base font-medium italic text-body-color">
+                        10:45am - 12:00pm English Worship
+                      </p>
                     </div>
                   </div>
                   <span className="absolute left-0 top-0 z-[-1]">
@@ -59,11 +65,7 @@ const Hero = () => {
                           gradientUnits="userSpaceOnUse"
                         >
                           <stop stopColor="white" stopOpacity="0.06" />
-                          <stop
-                            offset="1"
-                            stopColor="white"
-                            stopOpacity="0"
-                          />
+                          <stop offset="1" stopColor="white" stopOpacity="0" />
                         </linearGradient>
                         <linearGradient
                           id="paint1_linear_111:606"
@@ -74,11 +76,7 @@ const Hero = () => {
                           gradientUnits="userSpaceOnUse"
                         >
                           <stop stopColor="white" stopOpacity="0.06" />
-                          <stop
-                            offset="1"
-                            stopColor="white"
-                            stopOpacity="0"
-                          />
+                          <stop offset="1" stopColor="white" stopOpacity="0" />
                         </linearGradient>
                       </defs>
                     </svg>
@@ -180,7 +178,6 @@ const Hero = () => {
                     Service Time + Locations
                   </Link> */}
                   {/* <span className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5">Service Time + Locations</span> */}
-
                 </div>
               </div>
             </div>

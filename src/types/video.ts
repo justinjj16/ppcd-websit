@@ -1,6 +1,6 @@
 export type VideoType = {
   videoId: string;
-  isLive:boolean;
+  isLive: boolean;
   title: string;
   date: string;
   thumbnail?: string;

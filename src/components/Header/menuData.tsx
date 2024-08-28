@@ -36,8 +36,7 @@ const menuData: Menu[] = [
         path: "/believe",
         newTab: false,
       },
-
-    ]
+    ],
   },
   {
     id: 33,
@@ -53,7 +52,7 @@ const menuData: Menu[] = [
   },
   {
     id: 4,
-    title: "Pages",
+    title: "Light House",
     newTab: false,
     submenu: [
       {
@@ -62,12 +61,12 @@ const menuData: Menu[] = [
         path: "/articles",
         newTab: false,
       },
-      // {
-      //   id: 42,
-      //   title: "Contact Page",
-      //   path: "/contact",
-      //   newTab: false,
-      // },
+      {
+        id: 42,
+        title: "Contact",
+        path: "/contact",
+        newTab: false,
+      },
       // {
       //   id: 43,
       //   title: "Blog Grid Page",

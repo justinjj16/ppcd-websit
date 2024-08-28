@@ -13,7 +13,8 @@ const featuresData: Vision[] = [
       </svg>
     ),
     title: "Commitment",
-    paragraph: "To reach out to the community at-large and help the people become committed Christ Followers and be a part of the life and worship of the church.",
+    paragraph:
+      "To reach out to the community at-large and help the people become committed Christ Followers and be a part of the life and worship of the church.",
   },
   {
     id: 2,
@@ -27,7 +28,8 @@ const featuresData: Vision[] = [
       </svg>
     ),
     title: "Discipleship",
-    paragraph: "To disciple every member, in an atmosphere of love and prayer, built on the foundation of the Word of God, to become mature Christ Followers, conformed to the image of Jesus Christ.",
+    paragraph:
+      "To disciple every member, in an atmosphere of love and prayer, built on the foundation of the Word of God, to become mature Christ Followers, conformed to the image of Jesus Christ.",
   },
   {
     id: 3,

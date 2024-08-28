@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import SectionTitle from "@/components/Common/SectionTitle";
 import SingleVision from "@/components/SingleVision/singleVision";
-import visionData from './visionData';
+import visionData from "./visionData";
 
 export const metadata: Metadata = {
   title: "Vision Page | Philadelphia Pentecostal Church of Dallas",
@@ -24,21 +24,21 @@ const Vision = () => {
             width="100%"
           >
             <div className="text-base !leading-relaxed text-body-color md:text-lg">
-              <div className="py-2">The Philadelphia Pentecostal Church of Dallas (PPCD) exists to bring individuals to a
-              personal relationship with Jesus Christ, to help them learn to follow Christ and to lead them
-              into the fullness of the Spirit-filled life. We will do this through Commitment, Discipleship,
-Service, Unity, and Worship.</div>
+              <div className="py-2">
+                The Philadelphia Pentecostal Church of Dallas (PPCD) exists to
+                bring individuals to a personal relationship with Jesus Christ,
+                to help them learn to follow Christ and to lead them into the
+                fullness of the Spirit-filled life. We will do this through
+                Commitment, Discipleship, Service, Unity, and Worship.
+              </div>
               <div className="py-2"> Ephesians 4:12-13 </div>
             </div>
           </SectionTitle>
-
-
 
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
             {visionData.map((vision) => (
               <SingleVision key={vision.id} vision={vision} />
             ))}
-
           </div>
 
           <div className="absolute bottom-0 right-0 z-[-1]">

@@ -11,5 +11,5 @@ export type Article = {
   author: Author;
   tags: string[];
   publishDate: string;
-  content: React.ReactNode
+  content: React.ReactNode;
 };

@@ -2,7 +2,6 @@ import SingleArticle from "@/components/Articles/SingleArticle";
 import articleData from "@/components/Articles/ArticleData";
 import SectionTitle from "@/components/Common/SectionTitle";
 
-
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,7 +13,6 @@ export const metadata: Metadata = {
 const Articles = () => {
   return (
     <>
-
       <section className="pb-[120px] pt-[120px]">
         <div className="container">
           <SectionTitle

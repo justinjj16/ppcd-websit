@@ -1,11 +1,16 @@
-'use client'
-import { useState, useRef, useEffect } from 'react'
+"use client";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { UpCommingEvent } from '@/types/upCommingEvent';
-// Modal.setAppElement('#home');
-const ChurchModal = ({ event, onClose }: { event: UpCommingEvent, onClose: () => void }) => {
+import { UpCommingEvent } from "@/types/upCommingEvent";
 
-  const [isMoredetails, setIsMoreDetails] = useState(false)
+const ChurchModal = ({
+  event,
+  onClose,
+}: {
+  event: UpCommingEvent;
+  onClose: () => void;
+}) => {
+  const [isMoredetails, setIsMoreDetails] = useState(false);
 
   const wrapperRef = useRef(null);
   useEffect(() => {
@@ -13,8 +18,10 @@ const ChurchModal = ({ event, onClose }: { event: UpCommingEvent, onClose: () =>
     return () => {
       document.removeEventListener("click", handleClickOutside, false);
     };
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const handleClickOutside = event => {
+  const handleClickOutside = (event) => {
     if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
       onClose();
     }
@@ -22,11 +29,18 @@ const ChurchModal = ({ event, onClose }: { event: UpCommingEvent, onClose: () =>
 
   return (
     <>
-      <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+      <div
+        className="relative z-10"
+        aria-labelledby="modal-title"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div
+          className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+          aria-hidden="true"
+        ></div>
 
-        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
-
-        <div className="fixed inset-0 z-10 overflow-y-auto w-screen">
+        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
           <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center">
             {/* <!--
         Modal panel, show/hide based on modal state.
@@ -57,49 +71,69 @@ const ChurchModal = ({ event, onClose }: { event: UpCommingEvent, onClose: () =>
                 </div>
               </div>
             </div> */}
-            <div ref={wrapperRef} className="bg-white dark:bg-gray-dark p-2 rounded-2xl sm:w-1/3 w-full">
-              <div className=''>
+            <div
+              ref={wrapperRef}
+              className="w-full rounded-2xl bg-white p-2 dark:bg-gray-dark sm:w-1/3"
+            >
+              <div className="">
                 <Image
                   src={event.icon}
                   alt="author"
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-full h-auto sm:h-80 rounded-3xl comming-event-image transition ease-in-out delay-300 duration-300 "
+                  className="comming-event-image h-auto w-full rounded-3xl transition delay-300 duration-300 ease-in-out sm:h-80 "
                   loading="lazy"
                 />
               </div>
               <div>
                 <div className="flex flex-col">
-                  <h3 className="mb-1 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl py-4">{event.title}</h3>
-                  <span className="pr-[10px] text-base font-medium leading-relaxed text-body-color py-1">{event.paragraph}</span>
-                  <span className="pr-[10px] text-base font-medium leading-relaxed text-body-color">{event.nextDate.toDateString()}</span>
+                  <h3 className="mb-1 py-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                    {event.title}
+                  </h3>
+                  <span className="py-1 pr-[10px] text-base font-medium leading-relaxed text-body-color">
+                    {event.paragraph}
+                  </span>
+                  <span className="pr-[10px] text-base font-medium leading-relaxed text-body-color">
+                    {event.nextDate.toDateString()}
+                  </span>
                 </div>
-                { }
-
+                {}
               </div>
               {event.details && (
                 <>
-                  <div className="py-4" onClick={() => setIsMoreDetails(!isMoredetails)}>
-                    <button className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5">{!isMoredetails ? "More" : "Less"} details</button>
+                  <div
+                    className="py-4"
+                    onClick={() => setIsMoreDetails(!isMoredetails)}
+                  >
+                    <button className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5">
+                      {!isMoredetails ? "More" : "Less"} details
+                    </button>
                   </div>
                   <>
                     {isMoredetails && (
-                      <div className=" transition-all ease-in-out delay-700 duration-700">{event.details}</div>
+                      <div className=" transition-all delay-700 duration-700 ease-in-out">
+                        {event.details}
+                      </div>
                     )}
                   </>
                 </>
               )}
 
               <div>
-                <button onClick={onClose} className="p-2 rounded-sm font-medium hover:border-b-2 hover:border-b-body-color border-b-transparent border-b-2">Close</button>
+                <button
+                  onClick={onClose}
+                  className="rounded-sm border-b-2 border-b-transparent p-2 font-medium hover:border-b-2 hover:border-b-body-color"
+                >
+                  Close
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default ChurchModal;

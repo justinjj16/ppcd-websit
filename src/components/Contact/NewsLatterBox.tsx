@@ -1,6 +1,8 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import Image from "next/image";
+import { useEffect } from "react";
 
 const NewsLatterBox = () => {
   const { theme } = useTheme();
@@ -8,33 +10,54 @@ const NewsLatterBox = () => {
   return (
     <div className="relative z-10 rounded-sm bg-white p-8 shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
       <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
-        Subscribe to receive future updates
+        Philadelphia Pentecostal Church of Dallas
       </h3>
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
         Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare
         massa quis lectus.
       </p>
-      <div>
-        <input
-          type="text"
-          name="name"
-          placeholder="Enter your name"
-          className="border-stroke mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter your email"
-          className="border-stroke mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-        />
-        <input
-          type="submit"
-          value="Subscribe"
-          className="mb-5 flex w-full cursor-pointer items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
-        />
-        <p className="text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">
-          No spam guaranteed, So please don’t send any spam mail.
-        </p>
+      <div className="flex flex-col justify-start space-y-6">
+        <div className="flex flex-row space-x-6">
+          <Image
+            src="/images/contact/phone.svg"
+            alt="phone-image"
+            sizes="100vw"
+            width="0"
+            height="0"
+            className="h-5 w-5"
+          />
+          <div>
+            <p>+1 999 999 9999</p>
+          </div>
+        </div>
+
+        <div className="flex flex-row space-x-6">
+          <Image
+            src="/images/contact/email.svg"
+            alt="email-image"
+            sizes="100vw"
+            width="0"
+            height="0"
+            className="h-5 w-5"
+          />
+          <div>
+            <p>info@ppcd.com</p>
+          </div>
+        </div>
+        <div className="flex flex-row space-x-6">
+          <Image
+            src="/images/contact/location.svg"
+            alt="location-image"
+            sizes="100vw"
+            width="0"
+            height="0"
+            className="h-5 w-5"
+          />
+          <div>
+            <p>2915 Broadway Blvd,</p>
+            <p>Garland, TX</p>
+          </div>
+        </div>
       </div>
 
       <div>
