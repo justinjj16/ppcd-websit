@@ -83,7 +83,7 @@ const ArticleDetailsPage = ({ params }: { params: { articleid: string } }) => {
                   </div>
                   {currentArticle.content}
 
-                  <div className="items-center justify-between sm:flex">
+                  {/* <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
                       <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right">
                         Share this post :
@@ -92,7 +92,7 @@ const ArticleDetailsPage = ({ params }: { params: { articleid: string } }) => {
                         <SharePost />
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

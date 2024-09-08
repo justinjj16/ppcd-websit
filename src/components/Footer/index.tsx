@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
-                  <Image
+                  {/* <Image
                     src="/images/logo/logo-2.svg"
                     alt="logo"
                     className="w-full dark:hidden"
@@ -24,7 +24,13 @@ const Footer = () => {
                     className="hidden w-full dark:block"
                     width={140}
                     height={30}
-                  />
+                  /> */}
+                  <h2 className="text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[45px]">
+                    PPCD
+                </h2>
+                  <h6 className="text-sm font-bold text-black dark:text-white sm:text-4xl md:text-[27px]">
+                    CHURCH
+                </h6>
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
                   The LORD is my shepherd, I shall not be in want. he restores
@@ -33,7 +39,7 @@ const Footer = () => {
                 </p>
                 <div className="flex items-center">
                   <a
-                    href="/"
+                    href="https://www.facebook.com/PPCDchurch"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -52,7 +58,7 @@ const Footer = () => {
                       />
                     </svg>
                   </a>
-                  <a
+                  {/* <a
                     href="/"
                     aria-label="social-link"
                     target="_blank"
@@ -73,9 +79,9 @@ const Footer = () => {
                         fill="currentColor"
                       />
                     </svg>
-                  </a>
+                  </a> */}
                   <a
-                    href="/"
+                    href="https://www.youtube.com/@PPCDChurch"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -91,7 +97,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="/"
+                    href="https://www.facebook.com/PPCDchurch"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
