@@ -9,12 +9,8 @@ const Footer = () => {
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
-
-              <div className="w-60 max-w-full px-4 xl:mr-12 mb-12 lg:mb-16">
-                <Link
-                  href="/"
-                  className="header-logo block w-full pt-4"
-                >
+              <div className="mb-12 w-60 max-w-full px-4 lg:mb-16 xl:mr-12">
+                <Link href="/" className="header-logo block w-full pt-4">
                   <Image
                     src="/images/logo/logo-2.svg"
                     alt="logo"
@@ -29,12 +25,10 @@ const Footer = () => {
                     height={20}
                     className="hidden dark:block"
                   />
-
                 </Link>
               </div>
 
               <div className="">
-
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
                   The LORD is my shepherd, I shall not be in want. he restores
                   my soul. He guides me in paths of righteousness for his

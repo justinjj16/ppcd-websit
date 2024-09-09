@@ -1,7 +1,6 @@
 import { VideoType } from "@/types/video";
 
 const liveVideoData: VideoType[] = [
-
   {
     videoId: "c9MIabMieOY",
     isLive: true,
@@ -9,7 +8,6 @@ const liveVideoData: VideoType[] = [
     date: "Sept 9, 2024",
     thumbnail: "/images/article/post-01.jpg",
   },
-
 ];
 
 const videoData: VideoType[] = [

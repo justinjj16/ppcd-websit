@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
-import Loading from '@/components/Loading'
+import Loading from "@/components/Loading";
 
 import { videoData } from "@/components/Video/videoData";
 
