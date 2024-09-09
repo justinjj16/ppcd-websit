@@ -2,7 +2,6 @@
 
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { useEffect } from "react";
 
 const NewsLatterBox = () => {
   const { theme } = useTheme();
@@ -41,7 +40,7 @@ const NewsLatterBox = () => {
             className="h-5 w-5"
           />
           <div>
-            <p>info@ppcd.com</p>
+            <p>ppcdchurch@gmail.com</p>
           </div>
         </div>
         <div className="flex flex-row space-x-6">

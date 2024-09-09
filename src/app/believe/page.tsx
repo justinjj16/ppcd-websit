@@ -51,7 +51,7 @@ const Believe = () => {
                   </svg>
                   <div className="ml-6">
                     <p className="pr-[10px] text-base font-medium leading-relaxed text-body-color">
-                      {believe.paragraph}
+                      <strong>We believe</strong> {believe.paragraph}
                     </p>
                   </div>
                 </div>

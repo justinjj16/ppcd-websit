@@ -1,6 +1,18 @@
 import { VideoType } from "@/types/video";
 
 const liveVideoData: VideoType[] = [
+
+  {
+    videoId: "c9MIabMieOY",
+    isLive: true,
+    title: "Sunday Worship | PPCD Live Stream",
+    date: "Sept 9, 2024",
+    thumbnail: "/images/article/post-01.jpg",
+  },
+
+];
+
+const videoData: VideoType[] = [
   {
     videoId: "FXz3wkHCGJo",
     isLive: true,
@@ -8,9 +20,6 @@ const liveVideoData: VideoType[] = [
     date: "Aug 25, 2024",
     thumbnail: "/images/article/post-01.jpg",
   },
-];
-
-const videoData: VideoType[] = [
   {
     videoId: "7__ETSceOXo",
     isLive: true,

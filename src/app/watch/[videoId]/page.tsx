@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
+import Loading from '@/components/Loading'
 
 import { videoData } from "@/components/Video/videoData";
 
@@ -18,11 +19,11 @@ const WatchPage = ({ params }: { params: { videoId: string } }) => {
     (video) => video.videoId === params.videoId,
   );
 
-  console.log(params);
+  console.log(selectedVideo);
   return (
     <>
       <div className="pt-16"></div>
-      <Video selectedVideo={selectedVideo} />
+      {selectedVideo ? <Video selectedVideo={selectedVideo} /> : <Loading />}
     </>
   );
 };

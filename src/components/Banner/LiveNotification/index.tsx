@@ -46,7 +46,6 @@ const LiveNotification = () => {
           className="-m-3 p-3 focus-visible:outline-offset-[-4px]"
         >
           <span className="sr-only">Dismiss</span>
-          {/* <XMarkIcon aria-hidden="true" className="h-5 w-5 text-gray-900" /> */}
         </button>
       </div>
     </div>

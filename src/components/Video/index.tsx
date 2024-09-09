@@ -52,15 +52,15 @@ const Video = ({ selectedVideo }: { selectedVideo: VideoType }) => {
                     controls={true}
                     width="100%"
                     height="100%"
-                    url={`https://www.youtube.com/${selectedVideo.isLive ? "live/" : "embed/"}${selectedVideo.videoId}`}
+                    url={`https://www.youtube.com/${selectedVideo?.isLive ? "live/" : "embed/"}${selectedVideo?.videoId}`}
                   />
                 </div>
                 <div className="flex flex-col p-4">
                   <h3 className="mb-1 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                    {selectedVideo.title}
+                    {selectedVideo?.title}
                   </h3>
                   <p className="pr-[10px] text-base font-medium leading-relaxed text-body-color">
-                    {selectedVideo.date}
+                    {selectedVideo?.date}
                   </p>
                 </div>
               </div>

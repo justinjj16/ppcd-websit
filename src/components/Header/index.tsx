@@ -51,29 +51,29 @@ const Header = ({ isLiveNotification }: { isLiveNotification: boolean }) => {
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
-                className={`header-logo block w-full ${sticky ? "py-5 lg:py-2" : "pt-4"
+                className={`header-logo block w-full ${sticky ? "py-2" : "pt-4"
                   } `}
               >
-                {/* <Image
+                <Image
                   src="/images/logo/logo-2.svg"
                   alt="logo"
-                  width={140}
-                  height={27}
+                  width={80}
+                  height={20}
                   className=" dark:hidden"
                 />
                 <Image
                   src="/images/logo/logo.svg"
                   alt="logo"
-                  width={140}
-                  height={27}
+                  width={80}
+                  height={20}
                   className="hidden dark:block"
-                /> */}
-                <h2 className="text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[45px]">
+                />
+                {/* <h2 className="text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[45px]">
                   PPCD
                 </h2>
                 <h6 className="text-sm font-bold text-black dark:text-white sm:text-4xl md:text-[27px]">
                   CHURCH
-                </h6>
+                </h6> */}
               </Link>
             </div>
             <div className="flex w-full items-center justify-end px-4">

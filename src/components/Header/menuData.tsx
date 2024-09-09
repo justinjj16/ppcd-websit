@@ -18,12 +18,12 @@ const menuData: Menu[] = [
         path: "/about",
         newTab: false,
       },
-      {
-        id: 42,
-        title: "Leadership",
-        path: "/leadership",
-        newTab: false,
-      },
+      // {
+      //   id: 42,
+      //   title: "Leadership",
+      //   path: "/leadership",
+      //   newTab: false,
+      // },
       {
         id: 43,
         title: "Vision",
