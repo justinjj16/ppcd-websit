@@ -224,7 +224,7 @@ const Footer = () => {
               d="M-98.1618 65.0889C-68.1416 60.0601 4.73364 60.4882 56.0734 102.431C120.248 154.86 139.905 161.419 177.137 166.956C214.37 172.493 255.575 186.165 281.856 215.481"
               stroke="url(#paint3_linear_25:218)"
             />
-            <circle
+            {/* <circle
               opacity="0.8"
               cx="214.505"
               cy="60.5054"
@@ -232,7 +232,7 @@ const Footer = () => {
               transform="rotate(-13.421 214.505 60.5054)"
               stroke="url(#paint4_linear_25:218)"
             />
-            <circle cx="220" cy="63" r="43" fill="url(#paint5_radial_25:218)" />
+            <circle cx="220" cy="63" r="43" fill="url(#paint5_radial_25:218)" /> */}
             <defs>
               <linearGradient
                 id="paint0_linear_25:218"
