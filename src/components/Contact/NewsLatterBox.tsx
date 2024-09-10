@@ -26,7 +26,7 @@ const NewsLatterBox = () => {
             className="h-5 w-5"
           />
           <div>
-            <p>+1 999 999 9999</p>
+            <p>+1 972 261 6211</p>
           </div>
         </div>
 

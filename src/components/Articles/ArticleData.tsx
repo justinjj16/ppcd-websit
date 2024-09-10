@@ -7,7 +7,7 @@ const articleData: Article[] = [
     title: "ദൈവത്തിനായി നല്ല ഫലങ്ങൾ പുറപ്പെടുവിക്കാം",
     paragraph:
       "യോഹന്നാൻ 15:16 ൽ ഇപ്രകാരം പറയുന്നു. `നിങ്ങൾ എന്നെ തിരഞ്ഞെടുത്തു എന്നല്ല, ഞാൻ നിങ്ങളെ തിരഞ്ഞെടുത്തു, നിങ്ങൾ പോയി ഫലം കായ്ക്കേണ്ടതിനും നിങ്ങളുടെ ഫലം നിലനില്ക്കേണ്ടതിനും നിങ്ങളെ ആക്കിവച്ചുമിരിക്കുന്നു.` ഈ ലോക ബന്ധനങ്ങളിൽ നിന്ന് ദൈവം നമ്മ തിരഞ്ഞെടുത്തു തന്റെ മക്കളാക്കി തീർത്തിരിക്കുന്നത് ദൈവത്തിനുവേണ്ടി നല്ല ഫലങ്ങളെ നൽകേണ്ടതിനാണ്.",
-    image: "/images/article/article-01.jpg",
+    image: "/images/article/artical-bible.jpg",
     author: {
       name: "Raju M John",
       image: "/images/article/raju-john.png",
@@ -19,7 +19,7 @@ const articleData: Article[] = [
         <div className="mb-10 w-full overflow-hidden rounded">
           <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
             <Image
-              src="/images/article/article-details-02.jpg"
+              src="/images/article/artical-bible.jpg"
               alt="image"
               fill
               className="object-cover object-center"
@@ -108,7 +108,7 @@ const articleData: Article[] = [
     title: "A paradigm shift for the church   ",
     paragraph:
       "To compete for a championship, during a game a great team must make some adjustments. The second half is the crucial period for any successful team and at",
-    image: "/images/article/article-02.jpg",
+    image: "/images/article/artical-worship.jpg",
     author: {
       name: "P C JACOB",
       image: "/images/article/pc-jacob.png",
@@ -120,7 +120,7 @@ const articleData: Article[] = [
         <div className="mb-10 w-full overflow-hidden rounded">
           <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
             <Image
-              src="/images/article/article-details-01.jpg"
+              src="/images/article/artical-worship.jpg"
               alt="image"
               fill
               className="object-cover object-center"
@@ -476,19 +476,19 @@ const articleData: Article[] = [
       </div>
     ),
   },
-  {
-    id: "3",
-    title: "Tips to quickly improve your coding speed.",
-    paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/article/article-03.jpg",
-    author: {
-      name: "Lethium Deo",
-      image: "/images/article/author-03.png",
-    },
-    tags: ["design"],
-    publishDate: "2025",
-    content: "",
-  },
+  // {
+  //   id: "3",
+  //   title: "Tips to quickly improve your coding speed.",
+  //   paragraph:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+  //   image: "/images/article/article-03.jpg",
+  //   author: {
+  //     name: "Lethium Deo",
+  //     image: "/images/article/author-03.png",
+  //   },
+  //   tags: ["design"],
+  //   publishDate: "2025",
+  //   content: "",
+  // },
 ];
 export default articleData;

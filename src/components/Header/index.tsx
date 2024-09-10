@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
@@ -25,6 +25,26 @@ const Header = ({ isLiveNotification }: { isLiveNotification: boolean }) => {
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
   });
+
+  const wrapperRef = useRef(null);
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside, false);
+    return () => {
+      document.removeEventListener("click", handleClickOutside, false);
+    };
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [navbarOpen]);
+
+  const handleClickOutside = (event) => {
+    if (
+      navbarOpen &&
+      wrapperRef.current &&
+      !wrapperRef.current.contains(event.target)
+    ) {
+      setNavbarOpen(false);
+    }
+  };
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
@@ -103,6 +123,7 @@ const Header = ({ isLiveNotification }: { isLiveNotification: boolean }) => {
                   />
                 </button>
                 <nav
+                  ref={wrapperRef}
                   id="navbarCollapse"
                   className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
