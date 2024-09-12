@@ -42,7 +42,7 @@ const upCommingEventsData: UpCommingEvent[] = [
   },
   {
     id: 5,
-    icon: "/images/upcomingEvents/cottage-1.jpg",
+    icon: "/images/upcomingEvents/cottage.jpg",
     title: "Cottage Meeting",
     paragraph: "Every Saturday at 07:30pm",
     nextDate: NextDay(7),
