@@ -12,8 +12,7 @@ const NewsLatterBox = () => {
         Philadelphia Pentecostal Church of Dallas
       </h3>
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-        Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare
-        massa quis lectus.
+        Let us know how we can help!
       </p>
       <div className="flex flex-col justify-start space-y-6">
         <div className="flex flex-row space-x-6">
