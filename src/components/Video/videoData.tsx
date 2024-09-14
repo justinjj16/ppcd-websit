@@ -2,9 +2,10 @@ import { VideoType } from "@/types/video";
 
 const liveVideoData: VideoType[] = [
   {
-    videoId: "c9MIabMieOY",
-    isLive: true,
-    title: "Sunday Worship | PPCD Live Stream",
+    videoId: "o8QRgqxc_Mo?si=L_PNvI57a3De8XSv",
+    isLive: false,
+    title:
+      "Stephen - The Spirit-filled Christian | Message by Pastor P C Jacob",
     date: "Sept 9, 2024",
     thumbnail: "/images/article/post-01.jpg",
   },

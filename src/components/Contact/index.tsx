@@ -1,21 +1,70 @@
 "use client";
 import NewsLatterBox from "./NewsLatterBox";
 import { useTheme } from "next-themes";
+import { useState, useRef, useEffect } from "react";
+
+import { sendContactForm } from "@/lib/api";
+import { ToastType } from "@/types/toast";
+import Toast from "@/components/Toast";
 
 const Contact = () => {
   const { theme } = useTheme();
 
-  const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
+  const [loading, setLoading] = useState<boolean>(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  const [validationError, setValidationError] = useState<boolean>(false);
+
+  const [toastData, setToastData] = useState<ToastType>(null);
+
+  const [validationFirstNumber, setValidationFirstNumber] =
+    useState<number>(null);
+  const [validationSecondNumber, setValidationSecondNumber] =
+    useState<number>(null);
+
+  useEffect(() => {
+    if (!validationFirstNumber && !validationSecondNumber) {
+      setValidationFirstNumber(Math.floor(Math.random() * 20));
+      setValidationSecondNumber(Math.floor(Math.random() * 20));
+    }
+  }, []);
+
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (
+    event,
+  ) => {
     const formData = new FormData(event.currentTarget);
     event.preventDefault();
-    console.log(formData.get("name"));
-    console.log(formData.get("email"));
-    console.log(formData.get("message"));
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+    const validationNumber = formData.get("validationNumber");
+
+    const validate = validationFirstNumber + validationSecondNumber;
+    if (validationNumber !== validate.toString()) {
+      setValidationError(true);
+      return;
+    }
+    setLoading(true);
+    setValidationError(false);
+    try {
+      await sendContactForm({ name, email, message });
+      formRef.current.reset();
+      setValidationFirstNumber(Math.floor(Math.random() * 20));
+      setValidationSecondNumber(Math.floor(Math.random() * 20));
+      setToastData({
+        type: "sucess",
+        message:
+          "Message was successfully send. We will get back to you ASAP via email.",
+      });
+    } catch (err) {
+      setToastData({ type: "error", message: err.message });
+    } finally {
+      setLoading(false);
+    }
   };
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
-        <div className="-mx-4 mt-4 flex flex-wrap-reverse sm:flex-wrap">
+        <div className="-mx-4 mt-12 flex flex-wrap-reverse sm:mt-4 sm:flex-wrap">
           <div className="relative w-full px-4 lg:w-7/12 xl:w-8/12">
             <div
               className="mb-12 rounded-sm bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
@@ -27,7 +76,7 @@ const Contact = () => {
               <p className="mb-12 text-base font-medium text-body-color">
                 We will get back to you ASAP via email.
               </p>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} ref={formRef}>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -35,9 +84,10 @@ const Contact = () => {
                         htmlFor="name"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        Name
+                        Full Name
                       </label>
                       <input
+                        required
                         type="text"
                         name="name"
                         placeholder="Enter your name"
@@ -54,6 +104,7 @@ const Contact = () => {
                         Email
                       </label>
                       <input
+                        required
                         type="email"
                         name="email"
                         placeholder="Enter your email"
@@ -70,6 +121,7 @@ const Contact = () => {
                         Message
                       </label>
                       <textarea
+                        required
                         name="message"
                         rows={5}
                         placeholder="Enter your Message"
@@ -78,8 +130,40 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
-                      Submit
+                    <div className="mb-8 flex items-center">
+                      <label className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                        {validationFirstNumber} + {validationSecondNumber}
+                      </label>
+
+                      <input
+                        required
+                        type="number"
+                        name="validationNumber"
+                        placeholder=""
+                        className={`${validationError ? "border-[#ff0000]" : "dark:border-transparent"} border-stroke mx-3 rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary  dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none`}
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full px-4">
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="flex rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
+                    >
+                      {loading ? (
+                        <svg
+                          width="20"
+                          height="20"
+                          fill="currentColor"
+                          className="mr-2 animate-spin"
+                          viewBox="0 0 1792 1792"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M526 1394q0 53-37.5 90.5t-90.5 37.5q-52 0-90-38t-38-90q0-53 37.5-90.5t90.5-37.5 90.5 37.5 37.5 90.5zm498 206q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-704-704q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm1202 498q0 52-38 90t-90 38q-53 0-90.5-37.5t-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-964-996q0 66-47 113t-113 47-113-47-47-113 47-113 113-47 113 47 47 113zm1170 498q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-640-704q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm530 206q0 93-66 158.5t-158 65.5q-93 0-158.5-65.5t-65.5-158.5q0-92 65.5-158t158.5-66q92 0 158 66t66 158z"></path>
+                        </svg>
+                      ) : (
+                        "Submit"
+                      )}
                     </button>
                   </div>
                 </div>
@@ -306,6 +390,9 @@ const Contact = () => {
           <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
             <NewsLatterBox />
           </div>
+          {toastData && (
+            <Toast event={toastData} onClose={() => setToastData(null)} />
+          )}
         </div>
       </div>
     </section>
