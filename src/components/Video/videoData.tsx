@@ -2,6 +2,17 @@ import { VideoType } from "@/types/video";
 
 const liveVideoData: VideoType[] = [
   {
+    videoId: "0GF09BFU9AA?si=VBlei5c9pdACnv0T",
+    isLive: false,
+    title: "PPCD Live Stream - Sept 15, 2024",
+    date: "Sep 15, 2024",
+    thumbnail: "/images/video/live_sept_15.png",
+    sundayLive: true,
+  },
+];
+
+const videoData: VideoType[] = [
+  {
     videoId: "o8QRgqxc_Mo?si=L_PNvI57a3De8XSv",
     isLive: false,
     title:
@@ -9,9 +20,6 @@ const liveVideoData: VideoType[] = [
     date: "Sept 9, 2024",
     thumbnail: "/images/video/stephen.png",
   },
-];
-
-const videoData: VideoType[] = [
   {
     videoId: "21Pd_EdiEGo?si=V1phFzNV6Z_3k-nH",
     isLive: false,
@@ -40,13 +48,13 @@ const videoData: VideoType[] = [
     date: "Aug 26, 2024",
     thumbnail: "/images/video/build_my_life.jpeg",
   },
-  {
-    videoId: "hA0UgWJIPVE?si=MewvSbEL8HHTs2cD",
-    isLive: false,
-    title: "Kalvari Krushinmel Enikkay Maricha | PPCD Malayalam Choir",
-    date: "May 26, 2024",
-    thumbnail: "/images/video/kalvari_krushilnmel.jpeg",
-  },
+  // {
+  //   videoId: "hA0UgWJIPVE?si=MewvSbEL8HHTs2cD",
+  //   isLive: false,
+  //   title: "Kalvari Krushinmel Enikkay Maricha | PPCD Malayalam Choir",
+  //   date: "May 26, 2024",
+  //   thumbnail: "/images/video/kalvari_krushilnmel.jpeg",
+  // },
   {
     videoId: "5wVnjprmU58?si=nJpXFCqDCodbZzpu",
     isLive: false,

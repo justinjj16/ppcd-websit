@@ -74,7 +74,10 @@ const Video = ({ selectedVideo }: { selectedVideo: VideoType }) => {
                 </h3>
                 <ul className="p-2 pb-0">
                   {relatedVideos?.map(
-                    ({ title, videoId, date, thumbnail }, index) => (
+                    (
+                      { title, videoId, date, thumbnail, sundayLive },
+                      index,
+                    ) => (
                       <li
                         key={index}
                         className="mb-6 border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10"
@@ -88,6 +91,7 @@ const Video = ({ selectedVideo }: { selectedVideo: VideoType }) => {
                               : videoId
                           }
                           date={date}
+                          sundayLive={sundayLive}
                         />
                       </li>
                     ),

@@ -29,7 +29,7 @@ const LiveNotification = () => {
       </div>
       <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
         <p className="text-sm leading-6 text-gray-900">
-          Join sunday service 9:30am to 12am.
+          Join Sunday Service 9:30am to 12am.
         </p>
 
         <Link

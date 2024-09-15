@@ -6,11 +6,13 @@ const RelatedPost = ({
   slug,
   title,
   date,
+  sundayLive,
 }: {
   image: string;
   slug: string;
   title: string;
   date: string;
+  sundayLive: boolean;
 }) => {
   return (
     <div className="flex items-center lg:block xl:flex">
@@ -20,14 +22,21 @@ const RelatedPost = ({
         </div>
       </div>
       <div className="w-full">
-        <h5>
+        <h5 className="relative">
           <Link
             href={slug}
             className="mb-[6px] block text-base font-medium leading-snug text-black hover:text-primary dark:text-white dark:hover:text-primary"
           >
             {title}
           </Link>
+          {sundayLive && (
+            <span className="absolute bottom-1 right-1 flex h-4 w-4 ">
+              <span className="rigth-0 absolute inline-flex h-full w-full animate-ping rounded-full bg-[#FF0000] opacity-75"></span>
+              <span className="relative inline-flex h-4 w-4 rounded-full bg-[#FF0000]"></span>
+            </span>
+          )}
         </h5>
+
         <p className="text-xs font-medium text-body-color">{date}</p>
       </div>
     </div>

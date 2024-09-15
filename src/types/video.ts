@@ -4,4 +4,5 @@ export type VideoType = {
   title: string;
   date: string;
   thumbnail?: string;
+  sundayLive?: boolean;
 };
