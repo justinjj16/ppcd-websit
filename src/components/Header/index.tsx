@@ -57,11 +57,10 @@ const Header = ({ isLiveNotification }: { isLiveNotification: boolean }) => {
   };
 
   const usePathName = usePathname();
-
   return (
     <>
       <header
-        className={`header left-0 ${isLiveNotification && !sticky ? "top-30" : "top-0"} z-40 flex w-full items-center ${
+        className={`header left-0 ${isLiveNotification && sticky ? "top-0" : "top-30"} z-40 flex w-full items-center ${
           sticky
             ? "fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark dark:shadow-sticky-dark"
             : "absolute bg-transparent"
