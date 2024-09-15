@@ -69,7 +69,7 @@ const Header = ({ isLiveNotification }: { isLiveNotification: boolean }) => {
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
-            <div className="w-60 max-w-full px-4 xl:mr-12">
+            <div className="w-20 max-w-full px-4 sm:w-28 xl:mr-12">
               <Link
                 href="/"
                 className={`header-logo block w-full ${
@@ -79,15 +79,19 @@ const Header = ({ isLiveNotification }: { isLiveNotification: boolean }) => {
                 <Image
                   src="/images/logo/logo-2.svg"
                   alt="logo"
-                  width={80}
-                  height={20}
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
                   className=" dark:hidden"
                 />
                 <Image
                   src="/images/logo/logo.svg"
                   alt="logo"
-                  width={80}
-                  height={20}
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
                   className="hidden dark:block"
                 />
                 {/* <h2 className="text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[45px]">

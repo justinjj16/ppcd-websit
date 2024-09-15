@@ -9,20 +9,24 @@ const Footer = () => {
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
-              <div className="mb-12 w-60 max-w-full px-4 lg:mb-16 xl:mr-12">
+              <div className="mb-4 w-20 max-w-full px-4 sm:w-28 lg:mb-8 xl:mr-12">
                 <Link href="/" className="header-logo block w-full pt-4">
                   <Image
                     src="/images/logo/logo-2.svg"
                     alt="logo"
-                    width={80}
-                    height={20}
+                    width="0"
+                    height="0"
+                    sizes="100vw"
+                    style={{ width: "100%", height: "auto" }}
                     className=" dark:hidden"
                   />
                   <Image
                     src="/images/logo/logo.svg"
                     alt="logo"
-                    width={80}
-                    height={20}
+                    width="0"
+                    height="0"
+                    sizes="100vw"
+                    style={{ width: "100%", height: "auto" }}
                     className="hidden dark:block"
                   />
                 </Link>
