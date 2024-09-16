@@ -7,7 +7,7 @@ const liveVideoData: VideoType[] = [
     title: "PPCD Live Stream - Sept 15, 2024",
     date: "Sep 15, 2024",
     thumbnail: "/images/video/live_sept_15.png",
-    sundayLive: true,
+    sundayLive: false,
   },
 ];
 

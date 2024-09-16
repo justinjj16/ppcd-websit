@@ -14,7 +14,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const isLiveNotification = new Date().getDay() === 0;
+  const isLiveNotification = false;
+  // new Date().getDay() === 0;
   return (
     <html suppressHydrationWarning lang="en">
       {/*
