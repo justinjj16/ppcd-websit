@@ -1,5 +1,5 @@
 import { UpCommingEvent } from "@/types/upCommingEvent";
-import { NextDay, GetFirstNextFirstTuesday } from "@/utility/date";
+import { NextDay, GetFirstNextFirstDay } from "@/utility/date";
 
 const upCommingEventsData: UpCommingEvent[] = [
   {
@@ -22,7 +22,18 @@ const upCommingEventsData: UpCommingEvent[] = [
     title: "Bible Study",
     paragraph: "Every Wednesday at 8:00pm",
     nextDate: NextDay(4),
-    details: "",
+    details: (
+      <div className="flex flex-col py-1 pr-[10px] text-base font-medium leading-relaxed text-body-color">
+        <span className="py-1">
+          Join us for Bibile study, held via Zoom meeting!
+        </span>
+        <span className="py-1">
+          To participate, please visit our contact page and send an email to
+          request the Zoom ID and Password.
+        </span>
+        <span className="py-1">We look forward to connecting with you!</span>
+      </div>
+    ),
   },
   {
     id: 3,
@@ -36,8 +47,8 @@ const upCommingEventsData: UpCommingEvent[] = [
     id: 4,
     icon: "/images/upcomingEvents/sisters.jpg",
     title: "Sisters Meeting",
-    paragraph: "Every Friday at 08:00pm",
-    nextDate: NextDay(6),
+    paragraph: "First Friday of Every Month at 08:00pm",
+    nextDate: GetFirstNextFirstDay(5),
     details: "",
   },
   {
@@ -52,8 +63,8 @@ const upCommingEventsData: UpCommingEvent[] = [
     id: 6,
     icon: "/images/upcomingEvents/outreach.jpg",
     title: "Community Outreach",
-    paragraph: "First Saturday at 10:30am",
-    nextDate: GetFirstNextFirstTuesday(6),
+    paragraph: "First Saturday of Every Month at 10:30am",
+    nextDate: GetFirstNextFirstDay(6),
     details: "",
   },
 ];

@@ -27,8 +27,8 @@ const GetFirstNextFirstDayOfTheWeek = (currentDate, day) => {
   return returnValue;
 };
 
-const GetFirstNextFirstTuesday = (day) => {
+const GetFirstNextFirstDay = (day) => {
   return GetFirstNextFirstDayOfTheWeek(new Date(), day);
 };
 
-export { NextDay, GetFirstNextFirstTuesday };
+export { NextDay, GetFirstNextFirstDay };

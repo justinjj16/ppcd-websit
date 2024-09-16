@@ -106,7 +106,7 @@ const ChurchModal = ({
                     className="py-4"
                     onClick={() => setIsMoreDetails(!isMoredetails)}
                   >
-                    <button className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5">
+                    <button className="inline-block rounded-sm bg-black px-4 py-2 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5">
                       {!isMoredetails ? "More" : "Less"} details
                     </button>
                   </div>

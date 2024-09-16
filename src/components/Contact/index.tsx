@@ -130,17 +130,51 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <div className="mb-8 flex items-center">
-                      <label className="mb-3 block text-sm font-medium text-dark dark:text-white">
-                        {validationFirstNumber} + {validationSecondNumber}
-                      </label>
+                    <div className="mb-8">
+                      <div className="mb-3 flex items-center">
+                        <label
+                          htmlFor="message"
+                          className="block text-sm font-medium text-dark dark:text-white"
+                        >
+                          {validationFirstNumber} + {validationSecondNumber}
+                          <span className="ml-4">
+                            Human Verification Required
+                          </span>
+                        </label>
+                        <div className="ml-3 flex items-center justify-center">
+                          <div className="group relative flex flex-col items-center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 50 50"
+                              width="20px"
+                              height="20px"
+                            >
+                              <path
+                                fill={theme === "light" ? "#000000" : "#FFFFFF"}
+                                d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 25 11 A 3 3 0 0 0 22 14 A 3 3 0 0 0 25 17 A 3 3 0 0 0 28 14 A 3 3 0 0 0 25 11 z M 21 21 L 21 23 L 22 23 L 23 23 L 23 36 L 22 36 L 21 36 L 21 38 L 22 38 L 23 38 L 27 38 L 28 38 L 29 38 L 29 36 L 28 36 L 27 36 L 27 21 L 26 21 L 22 21 L 21 21 z"
+                              />
+                            </svg>
+                            <div className="absolute bottom-0 right-0 mb-5 hidden w-64 flex-col items-end group-hover:flex sm:left-0 sm:w-80 sm:items-start ">
+                              <span className="whitespace-no-wrap relative z-10 rounded-md bg-gray-dark p-4 text-sm font-medium leading-none text-white shadow-lg dark:bg-white dark:text-dark">
+                                Human Verification Required{" "}
+                                <p className="py-2 leading-4">
+                                  To ensure security, please confirm you are no
+                                  a robot. Perform the simple calculation below:
+                                </p>
+                                <p className="py-2">Example: 5 + 7 = 12</p>
+                              </span>
+                              <div className="-mt-2 mr-1 h-3 w-3 rotate-45 bg-gray-dark dark:bg-white sm:ml-1"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
                       <input
                         required
                         type="number"
                         name="validationNumber"
                         placeholder=""
-                        className={`${validationError ? "border-[#ff0000]" : "dark:border-transparent"} border-stroke mx-3 rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary  dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none`}
+                        className={`${validationError ? "border-[#ff0000]" : "dark:border-transparent"} border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none`}
                       />
                     </div>
                   </div>
