@@ -2,11 +2,11 @@ import { VideoType } from "@/types/video";
 
 const liveVideoData: VideoType[] = [
   {
-    videoId: "0GF09BFU9AA?si=VBlei5c9pdACnv0T",
+    videoId: "V8qgPSn8JPc?si=F0pay3wcBwLkpYQd",
     isLive: false,
-    title: "PPCD Live Stream - Sept 15, 2024",
-    date: "Sep 15, 2024",
-    thumbnail: "/images/video/live_sept_15.png",
+    title: "Great Is | Song by Elevation Worship",
+    date: "Sep 28, 2024",
+    thumbnail: "/images/video/great_is.png",
     sundayLive: false,
   },
 ];
