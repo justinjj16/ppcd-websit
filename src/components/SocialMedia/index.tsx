@@ -7,7 +7,7 @@ export default function SocialMedia() {
   const socialMediaHandler = (key) => {
     let link;
     if (key === "facebook") {
-      link = "https://www.facebook.com/PPCDchurch";
+      link = "https://www.facebook.com/profile.php?id=61565121380657";
     } else if (key === "instagram") {
     } else if (key === "youTube") {
       link = "https://www.youtube.com/@PPCDChurch";

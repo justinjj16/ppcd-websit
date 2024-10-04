@@ -40,7 +40,7 @@ const Footer = () => {
                 </p>
                 <div className="flex items-center justify-center">
                   <a
-                    href="https://www.facebook.com/PPCDchurch"
+                    href="https://www.facebook.com/profile.php?id=61565121380657"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -98,7 +98,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://www.facebook.com/PPCDchurch"
+                    href="https://www.facebook.com/profile.php?id=61565121380657"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
