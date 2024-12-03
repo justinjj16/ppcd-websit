@@ -1,15 +1,11 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
-import SharePost from "@/components/Articles/SharePost";
-import TagButton from "@/components/Articles/TagButton";
 import articleData from "@/components/Articles/ArticleData";
-import Breadcrumb from "@/components/Common/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Article Details Page | Philadelphia Pentecostal Church of Dallas",
   description: "Philadelphia Pentecostal Church of Dallas",
-  // other metadata
 };
 
 const ArticleDetailsPage = ({ params }: { params: { articleid: string } }) => {
