@@ -104,8 +104,8 @@ const articleData: Article[] = [
     ),
   },
   {
-    id: "2",
-    title: "A paradigm shift for the church   ",
+    id: "paradigm_shift",
+    title: "A paradigm shift for the church",
     paragraph:
       "To compete for a championship, during a game a great team must make some adjustments. The second half is the crucial period for any successful team and at",
     image: "/images/article/artical-worship.jpg",
@@ -476,19 +476,134 @@ const articleData: Article[] = [
       </div>
     ),
   },
-  // {
-  //   id: "3",
-  //   title: "Tips to quickly improve your coding speed.",
-  //   paragraph:
-  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-  //   image: "/images/article/article-03.jpg",
-  //   author: {
-  //     name: "Lethium Deo",
-  //     image: "/images/article/author-03.png",
-  //   },
-  //   tags: ["design"],
-  //   publishDate: "2025",
-  //   content: "",
-  // },
+  {
+    id: "lords_army",
+    title: "Are you an active member of the Lord's Army?",
+    paragraph:
+      "In Judges 6, we see 300 men were chosen under Gideon by Lord Almighty. Remember they were not selected to fight with the Midianites but to take part and stand firm in the battle, which the Lord was going to fight for them.",
+    image: "/images/article/artical-army.jpg",
+    author: {
+      name: "Koshy Mathew",
+      image: "/images/article/koshi_mathew.png",
+    },
+    tags: ["English"],
+    publishDate: "Dec 11, 2024",
+    content: (
+      <div>
+        <p className="indent-14 mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+          In Judges 6, we see 300 men were chosen under Gideon by Lord Almighty. Remember they were not selected to fight with the Midianites but to take part and stand firm in the battle, which the Lord was going to fight for them.
+          </p>
+
+        <div>
+          <p className="indent-14 mb-4 text-base font-medium leading-relaxed text-primary dark:text-white sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+            The Lord said to Gideon, &lsquo;With the three hundred men that lapped I will save you and give the Midianites into your hands... - Judges
+            7:7
+          </p>
+        </div>
+
+        <p className="indent-14 mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+          Imagine Gideon, under the supervision of Lord almighty calling out the names of the 300 men, one by one. Each of men would have responded and acknowledged Gideon&lsquo;s call.
+          </p>
+        <p className="indent-14 mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+          Likewise, our gracious Lord, through the Christ Jesus, has called each one of us personally. We see this calling both in the Old Testament and New Testament.
+           </p>
+        <p className="indent-14 mb-4 text-base font-medium leading-relaxed text-primary dark:text-white sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+          Do not fear, for I have redeemed you; I have summoned you by name; you are mine (Isaiah 43:1) He calls his own sheep by name and leads them out. (John 10:3)
+           </p>
+        <p className="indent-14 mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+          We are asked to put on the full armor of God and stand our ground with Lord leading us. We are not asked to fight, as bible says the battle belongs to Lord. We know this battle is not against flesh and blood but against the evil forces prevailing in this fallen world. We are asked to stand firm and faithful with Him, till the end. In his second epistle, Peter reminds us to confirm our calling and election. We were called not because we deserved it, but by the grace and mercy of our loving Father. 2 Peter 1:3-9 details about this journey with Jesus and how can ensure we do not stumble or backslide midway. Remember initially in Gideon&lsquo;s army there were 22000 men which reduced to 10000 men and finally only 300.
+           </p>
+        <p className="indent-14 mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+          Good News! 2 Peter 1:3 says, His divine power has given us everything we need to be effective, productive and successful in this journey. Below are a few things we must keep reminding ourselves during our journey. (Please read 2 Peter 1:3-9)
+           </p>
+        <ul className="list-disc">
+          <li className="mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed ">
+            We can tap into this divine power through the knowledge of Him who called us and led us (2 Peter 1:3). This is not just
+            worldly knowledge, but a personal intimate knowledge acquired by spending quality time in prayer and His word.
+            </li>
+          <li className="mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed ">
+            This journey is in the opposite direction to the world&lsquo;s way (2 Peter 1:4), opposite to the corruption of world caused by fleshly desires.
+          </li>
+          <li className="mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed ">
+            Everyone is given a precious gift at the start of the journey - which is faith. Now it is our duty to unwrap this gift and go through these like reading through a book. Unless you unwrap and start using this gift, it is of no use to you.
+          </li>
+          <li className="mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed ">
+            This is not Jesus dragging you through and you being passive. We must put an effort from our side into this journey. (2 Peter 1:5-6) as explained below.
+          </li>
+          <li className="mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed ">
+            This journey is a step-by-step process, gradually growing and maturing as we proceed. Starting with faith. Once we repent and accept Jesus then Bible says add moral excellence to faith. That is, awareness of what it means to be separated from the world. With this realization and focus, seek wisdom and knowledge from God. Then the Holy Spirit will start guiding and teaching us. Being empowered with His knowledge and His promises, we should practice self-control. As we continue to preserve in self-control, we slowly get transformed into Christ like character. This is expresses outward as love.
+          </li>
+        </ul>
+        <p className="indent-14 mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+          Peter reminds us that Jesus Christ is coming soon, and every faithful soldier will receive a rich welcome into the eternal kingdom of our Lord and Savior Jesus Christ. (2 Peter 1:11)
+           </p>
+        <p className="indent-14 mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+          To conclude, let us ask ourselves am I part of Lord&lsquo;s army. Have I acknowledged His great calling? If so, have I been sidetracked? Have I lost focus? Then let us come back and rejoin the journey with our Commander in Chief - Lord Jesus Christ.
+           </p>
+      </div>
+    )
+  },
+  {
+    id: "lessons_on_discipleship",
+    title: "Lessons on Discipleship from an Unlikely Source",
+    paragraph:
+      "Can we 'walk with Jesus' and still go to hell? Yes! That may seem harsh so let me explain: Judas Iscariot was a disciple of Jesus Christ. As a disciple, this man walked miles alongside Jesus, each and every day. He spent hours with Jesus, every day for three years. He sat at the table and ate meals with the Messiah. He listened to Bible teachings, directly from the mouth of the Son of God. Judas is a testament to the fact that we can 'walk with Jesus' and still be unsaved. We can be 'Christian' by label, partake of Christian activities, hold impressive positions and titles (Judas was the treasurer of Jesus's earthly ministry), hear solid Bible teaching and still be unchanged on the inside and be heading towards an eternity in hell, separated from God.",
+    image: "/images/article/artical-bible-1.jpg",
+    author: {
+      name: "Dr. Sheba John",
+      image: "/images/article/dr_sheba.png",
+    },
+    tags: ["English"],
+    publishDate: "Dec 14, 2024",
+    content: (
+      <div>
+        <p className="indent-14 mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">Can we &lsquo;walk with Jesus&lsquo; and still go to hell? Yes! That may seem harsh so let me explain: Judas Iscariot was a disciple of Jesus Christ. As a disciple, this man walked miles alongside Jesus, each and every day. He spent hours with Jesus, every day for three years. He sat at the table and ate meals with the Messiah. He listened to Bible teachings, directly from the mouth of the Son of God. Judas is a testament to the fact that we can &lsquo;walk with Jesus&lsquo; and still be unsaved. We can be &lsquo;Christian&lsquo; by label, partake of Christian activities, hold impressive positions and titles (Judas was the treasurer of Jesus&lsquo;s earthly ministry), hear solid Bible teaching and still be unchanged on the inside and be heading towards an eternity in hell, separated from God.</p>
+
+        <div>
+          <p className="indent-14 mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">The tragic life of Judas has insights to offer us in correct discipleship with Jesus Christ. Here are three lessons we can put into practice in our walk with Christ:</p>
+        </div>
+        <div className="mx-auto my-8 flex flex-col justify-center rounded-2xl bg-cream p-4 text-center dark:bg-yellow sm:w-1/2">
+          <p className="text-base font-medium leading-relaxed text-black dark:text-white sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+            Repent of sin, however small.
+          </p>
+        </div>
+        <p className="indent-14 mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+          John12:6 &lsquo;[Judas] was a thief and having charge of the moneybag, he used to help himself to what was put into it&lsquo;. Throughout the gospels, Judas is described as the one who betrayed Jesus. But there is one other description of Judas, that only John makes in his gospel: he was a thief. He used to &lsquo;take&lsquo; (NKJV) the money given to the ministry. The imperfect tense used in the original text conveys that he regularly stole money. Judas betrayal of Jesus for 30 pieces of silver was not a momentary lapse in judgment. Judas had a small sin habit, that left unchecked, became habitual sin or regular practice of sin. When bad seeds of sin grow unchecked in our lives, it can bear bitter fruit that leads to destruction and death (James 1:14-15). Ask the Holy Spirit daily to make us aware of sin, however small or big. When made aware and convicted of our sin, let us regularly confess and resolve to not repeat it.
+        </p>
+        <div className="mx-auto my-8 flex flex-col justify-center rounded-2xl bg-cream p-4 text-center dark:bg-yellow sm:w-1/2">
+          <p className="text-base font-medium leading-relaxed text-black dark:text-white sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+            Mediate on the Word of God.
+          </p>
+        </div>
+        <p className="indent-14 mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+          Most of us have grown up in church and have heard Bible teachings our whole life. We know a lot of Bible facts! But Judas reminds us that just knowing the Bible is insufficient. As true disciples, we must meditate on the Word of God and permit the Word to do a transformative work in our hearts and minds. God meets us in His Word. When we mediate on God&lsquo;s word, we have fellowship with God in and through His Word. God tells Joshua the secret to success: meditate on [the Word of God] day and night, so that you may be careful to do everything written in it. Then you will be prosperous and successful&lsquo; (Joshua 1:8, NIV). This is the secret to living a successful Christian life: &lsquo; Blessed is the man [whose] delight is the law of the Lord, and in His law, he mediates day and night&lsquo; (Psalms 1:2). The word &lsquo;mediate&lsquo; in Hebrew implies reflective pondering. It is not a superficial reading of the text, but we must internalize Scripture, allowing the Word of God to transform our hearts and minds. The Word of God &lsquo;shows us truth, exposes our rebellion, corrects our mistakes, trains us to live God&lsquo;s way&lsquo; (II Timothy 3:16-17, MSG). Let us have a routine of regularly reading and meditating on God&lsquo;s Word. As we read Scripture, ask the Holy Spirit to &lsquo;show us truth, expose our rebellion, correct our mistakes and train us to live God&lsquo;s way&lsquo;.
+        </p>
+        <div className="mx-auto my-8 flex flex-col justify-center rounded-2xl bg-cream p-4 text-center dark:bg-yellow sm:w-1/2">
+          <p className="text-base font-medium leading-relaxed text-black dark:text-white sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+            Be accountable to one another.
+          </p>
+        </div>
+        <p className="indent-14 mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+          Judas was well-regarded by the other 11 disciples. How do I know this? Because his betrayal of Jesus was a shock to the rest of the disciples. Judas was surrounded by a godly group of men and yet remained unsaved, unchanged and hell bound. Why? Because the close group of disciples did not really know Judas. His friends were unaware of his personal struggle with sin. Though he was part of a good &lsquo;church&lsquo;, he did not have accountability with anyone. Through Judas&lsquo;s tragic life, we are reminded that it is important to have a close community of Christ-centered friends that we can be accountable to, to help sharpen and strengthen our faith. God encourages us to be in fellowship with other Christians. In Hebrews 10: 24-25, we are urged to come together and encourage one another &lsquo;to stir up love and good works&lsquo;. We grow in spiritual maturity when we are in fellowship with individuals who will admonish and correct our ungodly attitudes and actions. Proverbs says &lsquo;as iron sharpens iron, so one man sharpens [and influences] another [through discussions] (Proverbs 27:17, AMP). Do we have someone in our life who is aware of our personal struggles? Do we have someone who will call out sin in our lives? If not, I would encourage you to identify a Christian friend or elder that you trust. Allow a trustworthy mentor into your personal struggles, build practical boundaries together to prevent strongholds in your life, and uphold each other in prayer.
+         </p>
+        <p className="indent-14 mb-4 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+          Judas&lsquo;s life is a warning that superficial Christianity will lead down a path to death and eternal separation from God. As true disciples of Christ, we learn a few important lessons from his life:
+           </p>
+
+        <ul className="mb-10 list-inside list-disc text-body-color">
+          <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+            Do not be casual with sin. Sin is a slippery slope that leads to more sin. Repent of small sin.
+            </li>
+          <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+            Meet regularly with God in His Word. Mediate on the Word of God and allow the Word of God to transform our hearts and minds.
+            </li>
+          <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+            Finally, let us &lsquo;be iron&lsquo; to each other. Let us, in love, hold each other accountable to God&lsquo;s standard of holiness and righteousness.
+            </li>
+        </ul>
+      </div>
+    )
+  },
+
 ];
 export default articleData;
