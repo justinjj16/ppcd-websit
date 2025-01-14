@@ -13,14 +13,14 @@ const Building = () => {
       <div className="pt-16"></div>
       <section id="building" className="py-16 md:py-20 lg:py-28">
         <div className="container">
-          <SectionTitle
-            title="Upcoming Building"
-            center
-            width="665px"
-          >
+          <SectionTitle title="Upcoming Building" center width="665px">
             <div className="text-base !leading-relaxed text-body-color md:text-lg">
               <div className="py-2 ">
-                This is a glimpse of our vision for rebuilding our beloved church, a place where our community can come together in worship and fellowship. We&lsquo;re excited to share this journey with you. Some of the demolition photos are listed here, marking the first steps towards our dream.
+                This is a glimpse of our vision for rebuilding our beloved
+                church, a place where our community can come together in worship
+                and fellowship. We&lsquo;re excited to share this journey with
+                you. Some of the demolition photos are listed here, marking the
+                first steps towards our dream.
               </div>
             </div>
           </SectionTitle>
@@ -30,18 +30,18 @@ const Building = () => {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
+              style={{ width: "100%", height: "auto" }}
               alt="building"
             />
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4 relative ">
+          <div className="relative grid gap-4 sm:grid-cols-2 ">
             <Image
               src="/images/building/building-2.jpeg"
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
+              style={{ width: "100%", height: "auto" }}
               alt="building"
             />
             <Image
@@ -49,17 +49,22 @@ const Building = () => {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
+              style={{ width: "100%", height: "auto" }}
               alt="building"
             />
           </div>
           <div className="text-base !leading-relaxed md:text-lg">
-            <div className="sm:py-6 py-4 justify-center flex text-center items-center">
-              Isaiah 54:2 Enlarge the place of your tent, stretch your tent curtains wide, do not hold back; lengthen your cords, strengthen your stakes.
+            <div className="flex items-center justify-center py-4 text-center sm:py-6">
+              Isaiah 54:2 Enlarge the place of your tent, stretch your tent
+              curtains wide, do not hold back; lengthen your cords, strengthen
+              your stakes.
             </div>
           </div>
-          <div className="sm:pt-6 pt-4 justify-center flex text-center items-center">
-            <p>You can choose to give via Zelle to <b>ppcdchurch@outlook.com</b> and subject <b>Building Fund</b></p>
+          <div className="flex items-center justify-center pt-4 text-center sm:pt-6">
+            <p>
+              You can choose to give via Zelle to <b>ppcdchurch@outlook.com</b>{" "}
+              and subject <b>Building Fund</b>
+            </p>
           </div>
         </div>
 
@@ -247,7 +252,6 @@ const Building = () => {
           </svg>
         </div>
       </section>
-
     </>
   );
 };
