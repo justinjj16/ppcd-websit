@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
+import PublicLayout from '@/components/PublicLayout/PublicLayout';
+
 export const metadata: Metadata = {
   title: "leadership Page | Philadelphia Pentecostal Church of Dallas",
   description: "ppcd leadership | Philadelphia Pentecostal Church of Dallas",
@@ -60,7 +62,7 @@ const data = [
 
 const Leadership = () => {
   return (
-    <>
+    <PublicLayout>
       <section
         id="leadership"
         className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark "
@@ -104,7 +106,7 @@ const Leadership = () => {
           </div>
         </div>
       </section>
-    </>
+    </PublicLayout>
   );
 };
 

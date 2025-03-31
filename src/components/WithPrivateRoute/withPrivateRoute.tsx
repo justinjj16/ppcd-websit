@@ -1,6 +1,8 @@
 import { useState, useEffect, ComponentType } from "react";
 import { useRouter } from "next/navigation";
 import { validateToken } from "@/lib/api";
+import PrivateLayout from '@/components/PrivateLayout/PrivateLayout'
+import Loading from "@/components/Loading";
 
 const withPrivateRoute = <P extends object>(
   WrappedComponent: ComponentType<P>,
@@ -18,12 +20,16 @@ const withPrivateRoute = <P extends object>(
         if (!isAuthenticated) {
           router.push("/admin/login");
         } else if (isAuthenticated) {
-          const validate = await validateToken(
-            localStorage.getItem("ppcdchurch-auth-token"),
-          );
-          if (validate.isValid) {
-            setLoading(false);
-          } else {
+          try {
+            const validate = await validateToken(
+              localStorage.getItem("ppcdchurch-auth-token"),
+            );
+            if (validate.isValid) {
+              setLoading(false);
+            } else {
+              router.push("/admin/login");
+            }
+          } catch (e) {
             router.push("/admin/login");
           }
         } else {
@@ -33,10 +39,16 @@ const withPrivateRoute = <P extends object>(
     }, [isAuthenticated, router]);
 
     if (loading) {
-      return <div>Loading...</div>;
+      return <Loading />;
     }
 
-    return <WrappedComponent {...props} />;
+    return (
+      <>
+        <PrivateLayout>
+          <WrappedComponent {...props} />
+        </PrivateLayout>
+      </>
+    )
   };
 
   return WithPrivateRoute;

@@ -1,6 +1,7 @@
+
+import PublicLayout from '@/components/PublicLayout/PublicLayout';
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-
 import ScrollUp from "@/components/Common/ScrollUp";
 import UpCommingEvents from "@/components/UpCommingEvents";
 import HomeHeading from "@/components/HomeHeading";
@@ -15,13 +16,12 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <>
+    <PublicLayout>
       <ScrollUp />
-
       <HomeHeading />
       <UpCommingEvents />
       <AboutSectionOne />
       <AboutSectionTwo />
-    </>
+    </PublicLayout>
   );
 }

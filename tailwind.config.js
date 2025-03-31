@@ -32,7 +32,14 @@ module.exports = {
 
       "2xl": "1400px",
       // => @media (min-width: 1400px) { ... }
+      "2xsm": "375px",
     },
+    // screens: {
+      
+    //   xsm: "425px",
+    //   "3xl": "2000px",
+    //   ...defaultTheme.screens,
+    // },
     extend: {
       colors: {
         current: "currentColor",
@@ -56,7 +63,7 @@ module.exports = {
           ...colors.gray,
           dark: "#1E232E",
           light: "#F0F2F9",
-        },
+        }
       },
 
       boxShadow: {
@@ -75,6 +82,17 @@ module.exports = {
       },
       dropShadow: {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
+      },
+      spacing: {
+        7.5: "1.875rem",
+        72.5: "18.125rem",
+      },
+
+      zIndex: {
+        999999: "999999",
+        99999: "99999",
+        9999: "9999",
+        999: "999",
       },
     },
   },

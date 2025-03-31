@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 
+import PublicLayout from '@/components/PublicLayout/PublicLayout';
 import SectionTitle from "@/components/Common/SectionTitle";
 import BelieveData from "./believeData";
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 const Believe = () => {
   return (
-    <>
+    <PublicLayout>
       <div className="pt-16"></div>
       <section id="believe" className="relative z-10 py-16 md:py-20 lg:py-28">
         <div className="container">
@@ -244,7 +245,8 @@ const Believe = () => {
           </div>
         </div>
       </section>
-    </>
+    </PublicLayout>
+
   );
 };
 

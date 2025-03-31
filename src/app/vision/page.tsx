@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import Image from "next/image";
 
+import PublicLayout from '@/components/PublicLayout/PublicLayout';
 import SectionTitle from "@/components/Common/SectionTitle";
 import SingleVision from "@/components/SingleVision/singleVision";
 import visionData from "./visionData";
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const Vision = () => {
   return (
-    <>
+    <PublicLayout>
       <div className="pt-16"></div>
       <section id="vision" className="relative z-10 py-16 md:py-20 lg:py-28">
         <div className="container">
@@ -87,7 +87,7 @@ const Vision = () => {
           </div>
         </div>
       </section>
-    </>
+    </PublicLayout>
   );
 };
 

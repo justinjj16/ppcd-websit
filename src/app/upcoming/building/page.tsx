@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
+
+import PublicLayout from '@/components/PublicLayout/PublicLayout';
 import SectionTitle from "../../../components/Common/SectionTitle";
 
 export const metadata: Metadata = {
@@ -9,7 +11,7 @@ export const metadata: Metadata = {
 
 const Building = () => {
   return (
-    <>
+    <PublicLayout>
       <div className="pt-16"></div>
       <section id="building" className="py-16 md:py-20 lg:py-28">
         <div className="container">
@@ -252,7 +254,7 @@ const Building = () => {
           </svg>
         </div>
       </section>
-    </>
+    </PublicLayout>
   );
 };
 

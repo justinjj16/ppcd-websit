@@ -1,3 +1,4 @@
+import PublicLayout from '@/components/PublicLayout/PublicLayout';
 import SingleArticle from "@/components/Articles/SingleArticle";
 import articleData from "@/components/Articles/ArticleData";
 import SectionTitle from "@/components/Common/SectionTitle";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 
 const Articles = () => {
   return (
-    <>
+    <PublicLayout>
       <section className="pb-[120px] pt-[120px]">
         <div className="container">
           <SectionTitle
@@ -93,7 +94,7 @@ const Articles = () => {
           </div> */}
         </div>
       </section>
-    </>
+    </PublicLayout>
   );
 };
 

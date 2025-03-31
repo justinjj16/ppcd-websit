@@ -1,3 +1,4 @@
+import PublicLayout from '@/components/PublicLayout/PublicLayout';
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import TopRigthAngle from "@/components/Designs/TopRigthAngle";
@@ -12,16 +13,12 @@ export const metadata: Metadata = {
 
 const AboutPage = () => {
   return (
-    <>
-      {/* <Breadcrumb
-        pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-      /> */}
+    <PublicLayout>
       <TopRigthAngle />
       <div className="pt-16"></div>
       <AboutSectionOne />
       <AboutSectionTwo />
-    </>
+    </PublicLayout>
   );
 };
 

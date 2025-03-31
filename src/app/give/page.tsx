@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+
+import PublicLayout from '@/components/PublicLayout/PublicLayout';
 import GiveComponent from "@/components/Give";
 
 export const metadata: Metadata = {
@@ -9,10 +11,10 @@ export const metadata: Metadata = {
 
 const Give = () => {
   return (
-    <>
+    <PublicLayout>
       <div className="pt-16"></div>
       <GiveComponent />
-    </>
+    </PublicLayout>
   );
 };
 

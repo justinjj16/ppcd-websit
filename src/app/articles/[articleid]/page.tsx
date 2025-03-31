@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
+import PublicLayout from '@/components/PublicLayout/PublicLayout';
 import articleData from "@/components/Articles/ArticleData";
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ const ArticleDetailsPage = ({ params }: { params: { articleid: string } }) => {
   );
 
   return (
-    <>
+    <PublicLayout>
       <section className="pb-[120px] pt-[150px]">
         {currentArticle ? (
           <div className="container">
@@ -97,7 +98,7 @@ const ArticleDetailsPage = ({ params }: { params: { articleid: string } }) => {
           ""
         )}
       </section>
-    </>
+    </PublicLayout>
   );
 };
 

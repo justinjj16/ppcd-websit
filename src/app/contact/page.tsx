@@ -1,4 +1,4 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import PublicLayout from '@/components/PublicLayout/PublicLayout';
 import Contact from "@/components/Contact";
 import TopRigthAngle from "@/components/Designs/TopRigthAngle";
 
@@ -12,15 +12,10 @@ export const metadata: Metadata = {
 
 const ContactPage = () => {
   return (
-    <>
-      {/* <Breadcrumb
-        pageName="Contact Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-      /> */}
+    <PublicLayout>
       <TopRigthAngle />
-
       <Contact />
-    </>
+    </PublicLayout>
   );
 };
 

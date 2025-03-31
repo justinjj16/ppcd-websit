@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
 
     if (base64Credentials === process.env.LOGIN_SECRET) {
       const token = jwt.sign({ email, password }, process.env.SECRET_KEY, {
-        expiresIn: "1h",
+        expiresIn: "3h",
       });
       return NextResponse.json(
         { token, message: "Authentication successfully" },
