@@ -7,6 +7,8 @@ import SocialMedia from "@/components/SocialMedia";
 import { Inter } from "next/font/google";
 import "../styles/index.css";
 
+import AnnouncementModal from '@/components/Banner/Announcement/Modal'
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -15,6 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const isLiveNotification = false;
+  const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true);
   // new Date().getDay() === 0;
   return (
     <html suppressHydrationWarning lang="en">
@@ -29,6 +32,12 @@ export default function RootLayout({
           {isLiveNotification && <LiveNotification />}
 
           <Header isLiveNotification={isLiveNotification} />
+          {isAnnouncementVisible && (
+            <AnnouncementModal
+              open={isAnnouncementVisible}
+              onClose={() => setIsAnnouncementVisible(false)}
+            />
+          )}
           {children}
           <Footer />
           <SocialMedia />
@@ -38,4 +47,5 @@ export default function RootLayout({
   );
 }
 
-import { Providers } from "./providers";
+import { Providers } from "./providers"; import { useEffect, useState } from "react";
+
