@@ -45,8 +45,35 @@ const AnnouncementModal = ({
           <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center">
             <div
               ref={wrapperRef}
-              className="w-full rounded-2xl bg-white p-2 dark:bg-gray-dark sm:w-1/3"
+              className="w-full rounded-2xl bg-white dark:bg-gray-dark sm:w-1/3"
             >
+              <div className="relative">
+                <button
+                  onClick={onClose}
+                  type="button"
+                  className="-mx-1.5 absolute right-0 -my-1.5 ml-auto inline-flex h-8 w-8 items-center justify-center rounded-lg border-red-700 border-2 bg-white p-1.5 text-red-600 hover:bg-gray-100 hover:text-red-600 focus:ring-2 focus:ring-gray-300 dark:bg-gray-800 dark:text-red-600 dark:hover:bg-gray-700 dark:hover:text-red-600"
+                  data-dismiss-target="#toast-warning"
+                  aria-label="Close"
+                >
+                  <span className="sr-only">Close</span>
+                  <svg
+                    className="h-3 w-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 14"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                    />
+                  </svg>
+                </button>
+              </div>
+
               <Image
                 src="/images/announcement/announcement.jpeg"
                 width={0}
@@ -56,15 +83,6 @@ const AnnouncementModal = ({
                 style={{ width: "100%", height: "auto" }}
                 alt="building"
               />
-
-              {/* <div>
-                <button
-                  onClick={onClose}
-                  className="rounded-sm border-b-2 border-b-transparent p-2 font-medium hover:border-b-2 hover:border-b-body-color"
-                >
-                  Close
-                </button>
-              </div> */}
             </div>
           </div>
         </div>
