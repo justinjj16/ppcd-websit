@@ -3,11 +3,27 @@ import { NextDay, GetFirstNextFirstDay } from "@/utility/date";
 
 const upCommingEventsData: UpCommingEvent[] = [
   {
+    id: 122,
+    icon: "/images/upcomingEvents/healthcare.jpg",
+    title: "FREE HEALTH FAIR",
+    paragraph: "May 31, 2025",
+    nextDate: new Date("May 31, 2025"),
+    redirectNextPageURL: "upcoming/free-health-fair",
+    details: (
+      <div className="flex flex-col py-1 pr-[10px] text-base font-medium leading-relaxed text-body-color">
+        <span className="py-1">9:30am - 10:45am malayalam worship</span>
+        <span className="py-1">10:00am - 10:45 Sunday school</span>
+        <span className="py-1">10:45am - 12:00pm English worship</span>
+      </div>
+    ),
+  },
+  {
     id: 1,
     icon: "/images/upcomingEvents/worship.jpg",
     title: "Sunday Service",
     paragraph: "Every Sunday at 9:30am",
     nextDate: NextDay(0),
+    redirectNextPageURL: null,
     details: (
       <div className="flex flex-col py-1 pr-[10px] text-base font-medium leading-relaxed text-body-color">
         <span className="py-1">9:30am - 10:45am malayalam worship</span>
@@ -22,6 +38,7 @@ const upCommingEventsData: UpCommingEvent[] = [
     title: "Bible Study",
     paragraph: "Every Wednesday at 8:00pm",
     nextDate: NextDay(4),
+    redirectNextPageURL: null,
     details: (
       <div className="flex flex-col py-1 pr-[10px] text-base font-medium leading-relaxed text-body-color">
         <span className="py-1">
@@ -42,6 +59,7 @@ const upCommingEventsData: UpCommingEvent[] = [
     paragraph: "Every Friday at 08:00pm",
     nextDate: NextDay(6),
     details: "",
+    redirectNextPageURL: null,
   },
   {
     id: 4,
@@ -50,6 +68,7 @@ const upCommingEventsData: UpCommingEvent[] = [
     paragraph: "First Friday of Every Month at 08:00pm",
     nextDate: GetFirstNextFirstDay(5),
     details: "",
+    redirectNextPageURL: null,
   },
   {
     id: 5,
@@ -58,6 +77,7 @@ const upCommingEventsData: UpCommingEvent[] = [
     paragraph: "Every Saturday at 07:30pm",
     nextDate: NextDay(7),
     details: "",
+    redirectNextPageURL: null,
   },
   {
     id: 6,
@@ -66,6 +86,7 @@ const upCommingEventsData: UpCommingEvent[] = [
     paragraph: "First Saturday of Every Month at 10:30am",
     nextDate: GetFirstNextFirstDay(6),
     details: "",
+    redirectNextPageURL: null,
   },
 ];
 export default upCommingEventsData;

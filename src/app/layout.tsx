@@ -7,7 +7,7 @@ import SocialMedia from "@/components/SocialMedia";
 import { Inter } from "next/font/google";
 import "../styles/index.css";
 
-import AnnouncementModal from '@/components/Banner/Announcement/Modal'
+import AnnouncementModal from "@/components/Banner/Announcement/Modal";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,5 +47,5 @@ export default function RootLayout({
   );
 }
 
-import { Providers } from "./providers"; import { useEffect, useState } from "react";
-
+import { Providers } from "./providers";
+import { useEffect, useState } from "react";

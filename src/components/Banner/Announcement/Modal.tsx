@@ -9,7 +9,6 @@ const AnnouncementModal = ({
   open: boolean;
   onClose: () => void;
 }) => {
-
   const wrapperRef = useRef(null);
 
   useEffect(() => {
@@ -35,7 +34,6 @@ const AnnouncementModal = ({
         role="dialog"
         aria-modal="true"
       >
-
         <div
           className="fixed inset-0 bg-transparent bg-opacity-50 transition-opacity"
           aria-hidden="true"
@@ -51,7 +49,7 @@ const AnnouncementModal = ({
                 <button
                   onClick={onClose}
                   type="button"
-                  className="-mx-1.5 absolute right-0 -my-1.5 ml-auto inline-flex h-8 w-8 items-center justify-center rounded-lg border-red-700 border-2 bg-white p-1.5 text-red-600 hover:bg-gray-100 hover:text-red-600 focus:ring-2 focus:ring-gray-300 dark:bg-gray-800 dark:text-red-600 dark:hover:bg-gray-700 dark:hover:text-red-600"
+                  className="absolute right-0 -mx-1.5 -my-1.5 ml-auto inline-flex h-8 w-8 items-center justify-center rounded-lg border-2 border-red-700 bg-white p-1.5 text-red-600 hover:bg-gray-100 hover:text-red-600 focus:ring-2 focus:ring-gray-300 dark:bg-gray-800 dark:text-red-600 dark:hover:bg-gray-700 dark:hover:text-red-600"
                   data-dismiss-target="#toast-warning"
                   aria-label="Close"
                 >

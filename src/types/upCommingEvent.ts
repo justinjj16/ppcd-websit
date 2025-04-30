@@ -5,4 +5,5 @@ export type UpCommingEvent = {
   paragraph: string;
   nextDate: Date;
   details: React.ReactNode;
+  redirectNextPageURL: string;
 };

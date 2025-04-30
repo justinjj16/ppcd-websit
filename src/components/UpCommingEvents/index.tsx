@@ -1,5 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+
 import SectionTitle from "../Common/SectionTitle";
 import SingleUpCommingEvent from "./SingleUpCommingEvent";
 import upCommingEventsData from "./UpCommingEventsData";
@@ -7,8 +9,17 @@ import ChurchModal from "@/components/UpCommingEvents/Modal";
 import { UpCommingEvent } from "@/types/upCommingEvent";
 
 const UpCommingEvents = () => {
+  const router = useRouter();
+
   const [currentEventSelected, setCurrentEventSelected] =
     useState<UpCommingEvent>(null);
+
+  useEffect(() => {
+    if (currentEventSelected && currentEventSelected.redirectNextPageURL) {
+      router.push(currentEventSelected.redirectNextPageURL);
+    }
+  }, [currentEventSelected]);
+
   return (
     <>
       <section id="upCommingEvents" className="py-16 md:py-20 lg:py-28">
@@ -31,12 +42,14 @@ const UpCommingEvents = () => {
             ))}
           </div>
         </div>
-        {currentEventSelected && (
-          <ChurchModal
-            event={currentEventSelected}
-            onClose={() => setCurrentEventSelected(null)}
-          />
-        )}
+        {/* upcomming event details popup */}
+        {currentEventSelected &&
+          currentEventSelected.redirectNextPageURL === null && (
+            <ChurchModal
+              event={currentEventSelected}
+              onClose={() => setCurrentEventSelected(null)}
+            />
+          )}
       </section>
     </>
   );
