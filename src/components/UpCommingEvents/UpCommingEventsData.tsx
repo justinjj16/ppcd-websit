@@ -5,7 +5,7 @@ const upCommingEventsData: UpCommingEvent[] = [
   {
     id: 122,
     icon: "/images/upcomingEvents/healthcare.jpg",
-    title: "FREE HEALTH FAIR",
+    title: "Free Health Fair",
     paragraph: "May 31, 2025",
     nextDate: new Date("May 31, 2025"),
     redirectNextPageURL: "upcoming/free-health-fair",

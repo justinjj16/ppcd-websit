@@ -30,7 +30,7 @@ export default function PDFViewer({ fileUrl }: { fileUrl: string }) {
   }, []);
 
   return (
-    <div ref={containerRef} className="w-full pt-24">
+    <div ref={containerRef} className="">
       <Document
         file={fileUrl}
         onLoadSuccess={({ numPages }) => setNumPages(numPages)}

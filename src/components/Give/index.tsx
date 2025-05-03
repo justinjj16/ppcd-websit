@@ -27,7 +27,7 @@ const GiveComponent = () => {
                   : "text-dark dark:text-white"
               } mr-4 cursor-pointer text-base font-semibold`}
             >
-              Zelle/Venmo
+              Zelle
             </span>
             <div
               onClick={() => setIsZelle(!isZelle)}
