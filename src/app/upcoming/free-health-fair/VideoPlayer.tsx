@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from 'react';
 
 export default function CustomVideoPlayer() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -20,7 +20,7 @@ export default function CustomVideoPlayer() {
     }
   };
 
-  // Track progress
+  // Track video progress
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -31,10 +31,8 @@ export default function CustomVideoPlayer() {
       if (total > 0) setProgress((current / total) * 100);
     };
 
-    video.addEventListener("timeupdate", updateProgress);
-    return () => {
-      video.removeEventListener("timeupdate", updateProgress);
-    };
+    video.addEventListener('timeupdate', updateProgress);
+    return () => video.removeEventListener('timeupdate', updateProgress);
   }, []);
 
   // Auto-hide overlay
@@ -62,29 +60,38 @@ export default function CustomVideoPlayer() {
   };
 
   return (
-    <div className="relative mx-auto w-full max-w-2xl">
+    <div className="relative w-full max-w-2xl mx-auto">
       <video
         ref={videoRef}
         className="w-full rounded"
         src="/videos/mcb.mp4"
         preload="metadata"
         onClick={togglePlay}
+        playsInline
+        poster="/images/videoThump.png"
       />
       {showOverlay && (
         <button
           onClick={togglePlay}
-          className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 text-xl font-semibold text-white focus:outline-none"
+          className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 text-white text-xl font-semibold focus:outline-none"
         >
-          {isPlaying ? "❚❚ Pause" : "▶ Play"}
+          {isPlaying ? '❚❚ Pause' : '▶ Play'}
         </button>
       )}
 
-      {/* Progress bar */}
+      {/* Gradient progress bar */}
       <div
-        className="h-2 w-full cursor-pointer bg-gray-300"
+        className="w-full h-2 bg-gray-300 cursor-pointer"
         onClick={handleSeek}
       >
-        <div className="h-full bg-red-500" style={{ width: `${progress}%` }} />
+        <div
+          className="h-full"
+          style={{
+            width: `${progress}%`,
+            background: 'linear-gradient(to right, #ef4444, #f97316, #facc15)', // red -> orange -> yellow
+            borderRadius: '0.25rem',
+          }}
+        />
       </div>
     </div>
   );
