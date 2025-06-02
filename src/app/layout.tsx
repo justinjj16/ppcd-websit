@@ -40,6 +40,7 @@ export default function RootLayout({
           )}
           {children}
           <Footer />
+
           <SocialMedia />
         </Providers>
       </body>
