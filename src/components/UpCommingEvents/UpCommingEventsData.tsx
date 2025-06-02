@@ -3,21 +3,6 @@ import { NextDay, GetFirstNextFirstDay } from "@/utility/date";
 
 const upCommingEventsData: UpCommingEvent[] = [
   {
-    id: 122,
-    icon: "/images/upcomingEvents/healthcare.jpg",
-    title: "Free Health Fair",
-    paragraph: "May 31, 2025",
-    nextDate: new Date("May 31, 2025"),
-    redirectNextPageURL: "upcoming/free-health-fair",
-    details: (
-      <div className="flex flex-col py-1 pr-[10px] text-base font-medium leading-relaxed text-body-color">
-        <span className="py-1">9:30am - 10:45am malayalam worship</span>
-        <span className="py-1">10:00am - 10:45 Sunday school</span>
-        <span className="py-1">10:45am - 12:00pm English worship</span>
-      </div>
-    ),
-  },
-  {
     id: 1,
     icon: "/images/upcomingEvents/worship.jpg",
     title: "Sunday Service",
