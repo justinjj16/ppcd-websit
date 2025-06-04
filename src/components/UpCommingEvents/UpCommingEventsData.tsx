@@ -38,7 +38,7 @@ const upCommingEventsData: UpCommingEvent[] = [
     icon: "/images/upcomingEvents/bible.jpg",
     title: "Bible Study",
     paragraph: "Every Wednesday at 8:00pm",
-    nextDate: NextDay(4),
+    nextDate: NextDay(3),
     redirectNextPageURL: null,
     details: (
       <div className="flex flex-col py-1 pr-[10px] text-base font-medium leading-relaxed text-body-color">
@@ -58,7 +58,7 @@ const upCommingEventsData: UpCommingEvent[] = [
     icon: "/images/upcomingEvents/intercessory.jpg",
     title: "Intercessory Prayer",
     paragraph: "Every Friday at 08:00pm",
-    nextDate: NextDay(6),
+    nextDate: NextDay(5),
     details: "",
     redirectNextPageURL: null,
   },
@@ -76,7 +76,7 @@ const upCommingEventsData: UpCommingEvent[] = [
     icon: "/images/upcomingEvents/cottage.jpg",
     title: "Cottage Meeting",
     paragraph: "Every Saturday at 07:30pm",
-    nextDate: NextDay(7),
+    nextDate: NextDay(6),
     details: "",
     redirectNextPageURL: null,
   },
