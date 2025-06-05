@@ -8,13 +8,9 @@ const upCommingEventsData: UpCommingEvent[] = [
     title: "Vacation Bible School",
     paragraph: "June 19 - 21, 2025 from 6:30pm to 9:00pm",
     nextDate: new Date("2025-06-20"),
-    redirectNextPageURL: null,
+    redirectNextPageURL: "upcoming/vbs",
     details: (
       <div className="flex flex-col py-1 pr-[10px] text-base font-medium leading-relaxed text-body-color">
-        <span>2915 Broadway Blvd, Garland, TX 75041</span>
-        <span>Contact: </span>
-        <span>Pr. P.C. Jacob: 405-921-3822</span>
-        <span>Jisha Abraham: 469-713-9896</span>
       </div>
     ),
   },
