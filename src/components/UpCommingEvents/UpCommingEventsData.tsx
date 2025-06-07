@@ -10,8 +10,7 @@ const upCommingEventsData: UpCommingEvent[] = [
     nextDate: new Date("2025-06-20"),
     redirectNextPageURL: "upcoming/vbs",
     details: (
-      <div className="flex flex-col py-1 pr-[10px] text-base font-medium leading-relaxed text-body-color">
-      </div>
+      <div className="flex flex-col py-1 pr-[10px] text-base font-medium leading-relaxed text-body-color"></div>
     ),
   },
   {
