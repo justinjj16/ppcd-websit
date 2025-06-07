@@ -1,11 +1,66 @@
 "use client";
 import PDFPage from "./PDFViewer";
+import SectionTitle from "@/components/Common/SectionTitle";
+
 export default function vbs() {
   return (
     <div className="relative pt-24">
-       <div className="m-auto w-full  sm:w-1/2">
-        <PDFPage />
+      <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+        <div className="-mx-4 flex items-center justify-center text-center lg:mx-auto lg:w-2/3">
+          <div className="w-full px-4">
+            <SectionTitle
+              title="Vacation Bible School"
+              mb="44px"
+              width="100%"
+              titleClassName="animate-wave-color"
+            >
+              <div className="text-base !leading-relaxed text-body-color md:text-lg">
+                <div className="py-2">
+                  Welcome to Philadelphia Pentecostal Church of Dallas&lsquo;
+                  Vacation Bible School 2025! {""}
+                </div>
+                <p className="py-2">
+                  We&lsquo;re excited to welcome your child to our upcoming
+                  Vacation Bible School program{" "}
+                  <strong className="text-green-600">
+                    &lsquo;Magnified&lsquo;
+                  </strong>
+                  .
+                </p>
+                <p className="py-2">
+                  VBS will run from Thursday,{" "}
+                  <strong>
+                    June 19, to Saturday, June 21, from 6:30-9 PM{" "}
+                  </strong>{" "}
+                  each day. We look forward to a wonderful week of faith and
+                  fun! Space is limited, so please register by Saturday,{" "}
+                  <strong>June 14, 2025, at 11:59 PM. </strong>
+                  <a
+                    className="text-red-800"
+                    href="https://form.jotform.com/250893642404054"
+                    target="_blank"
+                  >
+                    Click here to access the PPCD Magnified VBS 2025
+                    Registration Form.
+                  </a>
+                </p>
+                <p className="py-2">
+                  For questions or more information, please contact: Jisha
+                  Abraham, (469) 713-9896.
+                </p>
+                <p className="py-2">
+                  &lsquo;Oh, magnify the Lord with me and let us exalt His name
+                  together.&lsquo; - Psalm 34:3
+                </p>
+              </div>
+            </SectionTitle>
+          </div>
+        </div>
+        <div className="m-auto w-full  sm:w-1/2">
+          <PDFPage />
+        </div>
       </div>
+
       <div className="absolute bottom-0 right-0 z-[-1]">
         <svg
           width="200"
