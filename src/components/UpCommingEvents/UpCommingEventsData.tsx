@@ -3,17 +3,6 @@ import { NextDay, GetFirstNextFirstDay } from "@/utility/date";
 
 const upCommingEventsData: UpCommingEvent[] = [
   {
-    id: 7,
-    icon: "/images/upcomingEvents/vbs.jpg",
-    title: "Vacation Bible School",
-    paragraph: "June 19 - 21, 2025 from 6:30pm to 9:00pm",
-    nextDate: new Date("2025-06-20"),
-    redirectNextPageURL: "upcoming/vbs",
-    details: (
-      <div className="flex flex-col py-1 pr-[10px] text-base font-medium leading-relaxed text-body-color"></div>
-    ),
-  },
-  {
     id: 1,
     icon: "/images/upcomingEvents/worship.jpg",
     title: "Sunday Service",
