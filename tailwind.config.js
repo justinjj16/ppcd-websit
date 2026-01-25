@@ -76,7 +76,33 @@ module.exports = {
       dropShadow: {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
       },
+      keyframes: {
+        colorChange: {
+          '0%, 100%': { color: '#ef4444' }, // red-500
+          '50%': { color: '#3b82f6' }, // blue-500
+        },
+        waveColor: {
+          '0%':   { color: '#ef4444' }, // red-500
+          '16%':  { color: '#f97316' }, // orange-500
+          '32%':  { color: '#eab308' }, // yellow-500
+          '48%':  { color: '#10b981' }, // green-500
+          '64%':  { color: '#3b82f6' }, // blue-500
+          '80%':  { color: '#8b5cf6' }, // purple-500
+          '100%': { color: '#ef4444' }, // back to red-500
+        },
+        bgColorChange: {
+          '0%, 100%': { backgroundColor: '#fbbf24' }, // yellow-400
+          '50%': { backgroundColor: '#10b981' }, // green-500
+        }
+        
+      },
+      animation: {
+        'color-change': 'colorChange 3s ease-in-out infinite',
+        'bg-color-change': 'bgColorChange 3s ease-in-out infinite',
+        'wave-color': 'waveColor 3s linear infinite',
+      },
     },
+    
   },
   plugins: [],
 };
