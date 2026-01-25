@@ -42,6 +42,7 @@ export default function RootLayout({
           {children}
           <Analytics />
           <Footer />
+
           <SocialMedia />
         </Providers>
       </body>
