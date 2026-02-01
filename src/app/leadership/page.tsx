@@ -72,7 +72,7 @@ Since March 2024, Pr. PC Jacob serves as the Senior Pastor of Philadelphia Churc
     },
     {
       id: 5,
-      name: "Name Surname",
+      name: "Abraham Philip",
       position: "Board Member",
       image: "/images/leadership/placeholder.jpg",
       bio: "Full biography details for Board Member...",
@@ -80,7 +80,7 @@ Since March 2024, Pr. PC Jacob serves as the Senior Pastor of Philadelphia Churc
     },
     {
       id: 6,
-      name: "Name Surname",
+      name: "Sujan Tharakan",
       position: "Board Member",
       image: "/images/leadership/placeholder.jpg",
       bio: "Full biography details for Board Member...",
@@ -114,7 +114,7 @@ Since March 2024, Pr. PC Jacob serves as the Senior Pastor of Philadelphia Churc
     },
     {
       id: 10,
-      name: "Name Surname",
+      name: "Jeremiah Mathew",
       position: "Youth Secretary",
       image: "/images/leadership/placeholder.jpg",
       bio: "Full biography details for Youth Secretary...",
@@ -138,7 +138,7 @@ Since March 2024, Pr. PC Jacob serves as the Senior Pastor of Philadelphia Churc
     },
     {
       id: 13,
-      name: "Name Surname",
+      name: "Rebecca Shaji",
       position: "English Choir Director",
       image: "/images/leadership/placeholder.jpg",
       bio: "Full biography details for English Choir Director...",
@@ -146,7 +146,7 @@ Since March 2024, Pr. PC Jacob serves as the Senior Pastor of Philadelphia Churc
     },
     {
       id: 14,
-      name: "Name Surname",
+      name: "Ansel John",
       position: "VBS Coordinator",
       image: "/images/leadership/placeholder.jpg",
       bio: "Full biography details for VBS Coordinator...",
@@ -154,7 +154,7 @@ Since March 2024, Pr. PC Jacob serves as the Senior Pastor of Philadelphia Churc
     },
     {
       id: 15,
-      name: "Name Surname",
+      name: "Jaiden Mathew",
       position: "VBS Coordinator",
       image: "/images/leadership/placeholder.jpg",
       bio: "Full biography details for VBS Coordinator...",
@@ -162,7 +162,7 @@ Since March 2024, Pr. PC Jacob serves as the Senior Pastor of Philadelphia Churc
     },
     {
       id: 16,
-      name: "Name Surname",
+      name: "Sheeba Thomas",
       position: "Sisters Meeting Coordinator",
       image: "/images/leadership/placeholder.jpg",
       bio: "Full biography details for Sisters Meeting Coordinator...",
@@ -178,7 +178,7 @@ Since March 2024, Pr. PC Jacob serves as the Senior Pastor of Philadelphia Churc
     },
     {
       id: 18,
-      name: "Name Surname",
+      name: "Pr. Thomas Mathew",
       position: "Church Prayer Coordinator",
       image: "/images/leadership/placeholder.jpg",
       bio: "Full biography details for Church Prayer Coordinator...",
