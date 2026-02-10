@@ -48,7 +48,7 @@ Since March 2024, Pr. PC Jacob serves as the Senior Pastor of Philadelphia Churc
       id: 2,
       name: "Ariyappallil George",
       position: "Secretary",
-      image: "/images/leadership/ariyappallil.jpeg",
+      image: "/images/leadership/raju.jpg",
       bio: "Full biography details for Secretary...",
       category: 'administrative'
     },
@@ -74,7 +74,7 @@ Since March 2024, Pr. PC Jacob serves as the Senior Pastor of Philadelphia Churc
       id: 5,
       name: "Abraham Philip",
       position: "Board Member",
-      image: "/images/leadership/placeholder.jpg",
+      image: "/images/leadership/gigi.jpg",
       bio: "Full biography details for Board Member...",
       category: 'board'
     },
@@ -82,7 +82,7 @@ Since March 2024, Pr. PC Jacob serves as the Senior Pastor of Philadelphia Churc
       id: 6,
       name: "Sujan Tharakan",
       position: "Board Member",
-      image: "/images/leadership/placeholder.jpg",
+      image: "/images/leadership/sujan.jpg",
       bio: "Full biography details for Board Member...",
       category: 'board'
     },
@@ -180,10 +180,18 @@ Since March 2024, Pr. PC Jacob serves as the Senior Pastor of Philadelphia Churc
       id: 18,
       name: "Pr. Thomas Mathew",
       position: "Church Prayer Coordinator",
-      image: "/images/leadership/placeholder.jpg",
+      image: "/images/leadership/pastormathew.jpg",
       bio: "Full biography details for Church Prayer Coordinator...",
       category: 'ministry'
     },
+    {
+      id: 19,
+      name: "Joji George",
+      position: "Picnic Coordinator",
+      image: "/images/leadership/joji.jpg",
+      bio: "Full biography details for Church Picnic Coordinator...",
+      category: 'ministry'
+    }
   ];
 
   const openModal = (member: LeadershipMember) => {

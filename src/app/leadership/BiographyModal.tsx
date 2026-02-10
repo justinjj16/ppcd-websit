@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 interface BiographyModalProps {
   member: {
+    id: number;
     name: string;
     position: string;
     image: string;
@@ -33,6 +34,10 @@ const BiographyModal = ({ member, isOpen, onClose }: BiographyModalProps) => {
     };
   }, [isOpen, onClose]);
 
+  // Check if this is the pastor (ID 1)
+  const isPastor = member.id === 1;
+  const familyImage = "/images/leadership/pastor_aunty.jpg";
+
   if (!isOpen) return null;
 
   return (
@@ -44,7 +49,7 @@ const BiographyModal = ({ member, isOpen, onClose }: BiographyModalProps) => {
       />
 
       {/* Modal Content */}
-      <div className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto z-10 animate-in fade-in zoom-in duration-300">
+      <div className="relative bg-white dark:bg-gray-dark rounded-sm shadow-three max-w-5xl w-full max-h-[90vh] overflow-y-auto z-10 animate-in fade-in zoom-in duration-300">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -55,24 +60,24 @@ const BiographyModal = ({ member, isOpen, onClose }: BiographyModalProps) => {
         </button>
 
         {/* Modal Header */}
-        <div className="p-8 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="relative w-48 h-48 md:w-56 md:h-56 flex-shrink-0">
+        <div className="p-6 md:p-8 border-b border-gray-200 dark:border-white/[.15]">
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+            <div className="relative w-40 h-40 md:w-48 md:h-48 flex-shrink-0">
               <Image
                 src={member.image}
                 alt={member.name}
                 fill
-                className="rounded-xl object-cover border-4 border-white dark:border-gray-800 shadow-lg"
+                className="rounded-lg object-cover"
               />
             </div>
-            <div className="flex-1">
-              <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white mb-2">
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-2xl md:text-3xl font-bold text-black dark:text-white mb-2">
                 {member.name}
               </h2>
-              <p className="text-xl md:text-2xl font-semibold text-primary dark:text-primary-light mb-4">
+              <p className="text-lg md:text-xl font-semibold text-primary dark:text-primary-light mb-3 md:mb-4">
                 {member.position}
               </p>
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center justify-center md:justify-start space-x-4">
                 <div className="w-12 h-1 bg-primary dark:bg-primary-light rounded-full"></div>
                 <span className="text-gray-600 dark:text-gray-400 text-sm font-medium">
                   Philadelphia Church
@@ -83,30 +88,52 @@ const BiographyModal = ({ member, isOpen, onClose }: BiographyModalProps) => {
         </div>
 
         {/* Modal Body */}
-        <div className="p-8">
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-black dark:text-white mb-6 flex items-center gap-2">
-              <span className="text-primary dark:text-primary-light">📖</span>
-              Biography
-            </h3>
-            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
-              {member.bio.split('\n').map((paragraph, index) => (
-                paragraph.trim() && (
-                  <p key={index} className="text-base md:text-lg">
-                    {paragraph}
-                  </p>
-                )
-              ))}
+        <div className="p-6 md:p-8">
+          <div className="max-w-4xl mx-auto">
+            {/* Biography Section */}
+            <div className="mb-8">
+              <h3 className="text-xl md:text-2xl font-bold text-black dark:text-white mb-4 flex items-center gap-2">
+                <span className="text-primary dark:text-primary-light">📖</span>
+                Biography
+              </h3>
+              <div className="space-y-4 text-base font-medium text-body-color dark:text-body-color-dark leading-relaxed">
+                {member.bio.split('\n').map((paragraph, index) => (
+                  paragraph.trim() && (
+                    <p key={index}>
+                      {paragraph}
+                    </p>
+                  )
+                ))}
+              </div>
             </div>
+
+            {isPastor && familyImage && (
+              <div className="mb-8">
+                <div className="relative w-full max-w-[320px] md:max-w-[360px] lg:max-w-[400px] aspect-square mb-6 m-auto">
+                  <Image
+                    src={familyImage}
+                    alt={`${member.name} Family`}
+                    fill
+                    className="rounded-lg object-cover border-2 border-gray-200 dark:border-gray-700"
+                    priority
+                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+                  />
+                </div>
+                <p className="mt-4 text-center text-gray-600 dark:text-gray-400 text-sm italic">
+                  Pastor P. C. Jacob with his wife Renny Jacob
+                </p>
+              </div>
+            )}
+
           </div>
         </div>
 
         {/* Modal Footer */}
-        <div className="p-8 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 rounded-b-2xl">
+        <div className="p-6 md:p-8 border-t border-gray-200 dark:border-white/[.15] bg-gray-50 dark:bg-gray-900/50 rounded-b-sm">
           <div className="flex justify-end">
             <button
               onClick={onClose}
-              className="px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors duration-300 font-medium shadow-lg hover:shadow-xl"
+              className="px-6 md:px-8 py-3 bg-primary text-white rounded-sm hover:bg-primary/90 transition-colors duration-300 font-medium shadow-submit dark:shadow-submit-dark"
             >
               Close Biography
             </button>
