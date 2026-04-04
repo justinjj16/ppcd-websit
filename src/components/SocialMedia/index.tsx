@@ -9,6 +9,7 @@ export default function SocialMedia() {
     if (key === "facebook") {
       link = "https://www.facebook.com/profile.php?id=61565121380657";
     } else if (key === "instagram") {
+      link = 'https://www.instagram.com/philadelphiachurchdallas'
     } else if (key === "youTube") {
       link = "https://www.youtube.com/@PPCDChurch";
     }
