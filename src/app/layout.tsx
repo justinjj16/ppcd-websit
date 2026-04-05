@@ -1,3 +1,4 @@
+// src/app/layout.tsx
 "use client";
 
 import { Analytics } from "@vercel/analytics/next";
@@ -7,6 +8,8 @@ import LiveNotification from "@/components/Banner/LiveNotification";
 import SocialMedia from "@/components/SocialMedia";
 import { Inter } from "next/font/google";
 import "../styles/index.css";
+import { useState } from "react";
+import { Providers } from "./providers";
 
 import AnnouncementModal from "@/components/Banner/Announcement/Modal";
 
@@ -18,20 +21,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const isLiveNotification = false;
-  const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(false);
-  // new Date().getDay() === 0;
+  const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true);
+
   return (
     <html suppressHydrationWarning lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
           {isLiveNotification && <LiveNotification />}
-
           <Header isLiveNotification={isLiveNotification} />
           {isAnnouncementVisible && (
             <AnnouncementModal
@@ -42,13 +39,9 @@ export default function RootLayout({
           {children}
           <Analytics />
           <Footer />
-
           <SocialMedia />
         </Providers>
       </body>
     </html>
   );
 }
-
-import { Providers } from "./providers";
-import { useEffect, useState } from "react";
