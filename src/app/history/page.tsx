@@ -29,6 +29,28 @@ const HistoryPage = () => {
     return () => observers.forEach(observer => observer.disconnect());
   }, []);
 
+
+  const [showIndicator, setShowIndicator] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowIndicator(false);
+      } else {
+        setShowIndicator(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToNext = () => {
+    const nextSection = document.getElementById("next-section");
+    nextSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
+
   return (
     <>
       {/* Hero Section with Ken Burns Zoom Effect */}
@@ -71,124 +93,23 @@ const HistoryPage = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2 animate-bounce">
-          <div className="h-10 w-6 rounded-full border-2 border-white">
-            <div className="mx-auto mt-2 h-2 w-2 animate-pulse rounded-full bg-white"></div>
+        {showIndicator && (
+          <div
+            onClick={scrollToNext}
+            className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2 flex flex-col items-center cursor-pointer animate-bounce transition-opacity duration-500"
+          >
+            <div className="h-10 w-6 rounded-full border-2 border-white flex items-start justify-center">
+              <div className="mt-2 h-2 w-2 rounded-full bg-white animate-pulse"></div>
+            </div>
+            <p className="mt-2 text-xs text-white/80 tracking-wide">Scroll</p>
           </div>
-        </div>
+        )}
       </section>
 
-      {/* History Content */}
-      <section className="py-16 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-4xl">
-            <div
-              ref={el => { sectionRefs.current[3] = el; }}
-              className={`transition-all duration-1000 delay-100 ${visibleSections.includes(3) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                }`}
-            >
-              <h2 className="mb-8 text-center text-3xl font-bold text-black dark:text-white md:text-4xl">
-                Our Journey of <span className="text-primary">Faith</span>
-              </h2>
-            </div>
-
-            <div className="prose prose-lg dark:prose-invert mx-auto space-y-6 text-gray-600 dark:text-gray-400">
-              <div
-                ref={el => { sectionRefs.current[4] = el; }}
-                className={`transition-all duration-1000 delay-200 ${visibleSections.includes(4) ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-                  }`}
-              >
-                <p className="text-lg leading-relaxed">
-                  <strong className="text-primary">Philadelphia Pentecostal Church of Dallas (PPCD)</strong> was founded in
-                  1996 with a small group of believers who had a vision to create a place of worship that would
-                  serve the Malayalam-speaking Christian community in the Dallas-Fort Worth metroplex.
-                </p>
-              </div>
-
-              <div
-                ref={el => { sectionRefs.current[5] = el; }}
-                className={`transition-all duration-1000 delay-300 ${visibleSections.includes(5) ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
-                  }`}
-              >
-                <p>
-                  What began as humble gatherings in a small storefront has grown into a vibrant, multi-ethnic
-                  congregation that now meets at <strong>2915 Broadway Blvd, Garland, TX</strong>. From those early days
-                  of just a handful of families, God has multiplied our numbers and expanded our influence throughout
-                  the community.
-                </p>
-              </div>
-
-              <div
-                ref={el => { sectionRefs.current[6] = el; }}
-                className={`transition-all duration-1000 delay-400 ${visibleSections.includes(6) ? "opacity-100 scale-100" : "opacity-0 scale-95"
-                  }`}
-              >
-                <div className="relative">
-                  <div className="absolute -left-4 top-0 text-6xl font-serif text-primary/20">&lsquo;</div>
-                  <p className="pl-8 italic">
-                    Over the past three decades, PPCD has been a beacon of hope, a center for authentic worship,
-                    and a family where people from all backgrounds have found belonging, healing, and purpose.
-                    We&lsquo;ve witnessed countless testimonies of lives transformed, marriages restored, families united,
-                    and souls saved through the powerful message of the Gospel.
-                  </p>
-                </div>
-              </div>
-
-              <div
-                ref={el => { sectionRefs.current[7] = el; }}
-                className={`transition-all duration-1000 delay-500 ${visibleSections.includes(7) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                  }`}
-              >
-                <p>
-                  Our church has been blessed with dedicated pastors, faithful leaders, and committed members who
-                  have labored tirelessly to build God&lsquo;s kingdom. Through every season—times of growth and times
-                  of challenge—God has remained faithful, guiding our steps and blessing our efforts.
-                </p>
-              </div>
-
-              <div
-                ref={el => { sectionRefs.current[8] = el; }}
-                className={`transition-all duration-1000 delay-600 ${visibleSections.includes(8) ? "opacity-100 scale-100" : "opacity-0 scale-95"
-                  }`}
-              >
-                <div className="my-8 rounded-2xl bg-primary/5 p-6 transition-all duration-500 hover:shadow-xl md:p-8">
-                  <h3 className="mb-4 text-2xl font-bold text-primary">Our Mission Then and Now</h3>
-                  <p className="italic">
-                    &lsquo;To bring individuals to a personal relationship with Jesus Christ, to help them learn to
-                    follow Christ, and to lead them into the fullness of the Spirit-filled life through Commitment,
-                    Discipleship, Service, Unity, and Worship.&lsquo;
-                  </p>
-                  <p className="mt-2 text-sm text-gray-500">— Ephesians 4:12-13</p>
-                </div>
-              </div>
-
-              <div
-                ref={el => { sectionRefs.current[9] = el; }}
-                className={`transition-all duration-1000 delay-700 ${visibleSections.includes(9) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                  }`}
-              >
-                <p>
-                  As we celebrate our <strong className="text-primary">30th Anniversary</strong>, we look back with
-                  gratitude for God&lsquo;s provision and forward with anticipation for what He has in store. The best
-                  days of PPCD are still ahead, and we invite you to be part of this next chapter of our story.
-                </p>
-              </div>
-
-              <div
-                ref={el => { sectionRefs.current[10] = el; }}
-                className={`transition-all duration-1000 delay-800 ${visibleSections.includes(10) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                  }`}
-              >
-                <div className="text-center">
-                  <p className="animate-wave-color text-lg font-semibold text-primary">
-                    To God be the glory—great things He has done, and greater things are yet to come!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <section id="next-section">
+        <SocialMediaFeed />
       </section>
+
 
       {/* Anniversary Celebration Events */}
       <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gold-50 to-primary/5 dark:from-gray-800 dark:to-gray-900">
@@ -243,7 +164,6 @@ const HistoryPage = () => {
       </section>
 
       {/* Social Media Section */}
-      <SocialMediaFeed />
 
       <style jsx global>{`
         /* Ken Burns Zoom Effect for Hero Background */
@@ -369,45 +289,87 @@ const HistoryPage = () => {
 
 const anniversaryEvents = [
   {
-    title: "30th Anniversary Kickoff Service",
-    date: "January 1, 2026",
+    title: "Youth Revival Meeting",
+    date: "February 27, 2026",
     time: "10:00 AM",
-    description: "Join us as we begin our month-long celebration with a special worship service and unveiling of our commemorative materials.",
+    description: "A dynamic youth gathering focused on revival, worship, and spiritual renewal.",
     image: "/images/anniversary/one.jpg",
   },
   {
-    title: "Founders' Day Celebration",
-    date: "September 8, 2026",
+    title: "Thanksgiving Celebration",
+    date: "March 15, 2026",
     time: "11:00 AM",
-    description: "Honoring the founding members and families who established PPCD with a special tribute and testimony service.",
+    description: "A joyful service celebrating 30 years of God’s faithfulness and blessings.",
     image: "/images/anniversary/two.jpg",
   },
   {
-    title: "30th Anniversary Gala",
-    date: "September 14, 2026",
+    title: "Public Inauguration: New Church Building",
+    date: "April 04, 2026",
     time: "6:00 PM",
-    description: "An elegant evening of celebration, dinner, music, and dancing as we commemorate three decades of God's faithfulness.",
+    description: "Official dedication of our new church building to God’s glory.",
     image: "/images/anniversary/three.jpg",
   },
   {
-    title: "Community Thanksgiving Service",
-    date: "September 20, 2026",
+    title: "First Sunday Service: New Church Building",
+    date: "April 05, 2026",
     time: "10:00 AM",
-    description: "A special service open to the entire community with guest speakers, choir presentations, and a community lunch.",
+    description: "Our first Sunday worship service in the newly inaugurated sanctuary.",
     image: "/images/anniversary/four.jpg",
   },
   {
-    title: "Youth & Young Adults Night",
-    date: "September 25, 2026",
+    title: "Medical Camp",
+    date: "May",
     time: "7:00 PM",
-    description: "Celebrating the next generation with worship, games, and a special message for our youth and young adults.",
+    description: "Community outreach providing basic healthcare and support services.",
     image: "/images/anniversary/five.jpg",
   },
   {
-    title: "Grand Finale Worship Service",
-    date: "September 27, 2026",
+    title: "Youth Revival Meeting",
+    date: "June",
     time: "10:00 AM",
-    description: "Closing our anniversary month with a powerful worship service, baptism celebration, and prophetic declarations for the next 30 years.",
+    description: "A refreshing time of worship and revival for the youth community.",
+    image: "/images/anniversary/six.jpg",
+  },
+  {
+    title: "Church VBS",
+    date: "July",
+    time: "",
+    description: "Fun-filled Vacation Bible School for children with learning and activities.",
+    image: "/images/anniversary/one.jpg",
+  },
+  {
+    title: "Gents, Ladies and Youth Meeting & Lunch",
+    date: "August",
+    time: "",
+    description: "Fellowship gathering for all groups followed by a shared meal.",
+    image: "/images/anniversary/two.jpg",
+  },
+  {
+    title: "Anish Kollam Bible Study",
+    date: "September 10 - 11 2026",
+    time: "",
+    description: "Special Bible study sessions with guest speaker Anish Kollam.",
+    image: "/images/anniversary/three.jpg",
+  },
+  {
+    title: "Musical Night",
+    date: "October",
+    time: "",
+    description: "An evening of worship and music celebrating God’s goodness.",
+    image: "/images/anniversary/four.jpg",
+  },
+  {
+    title: "Pearl Jubilee Convention",
+    date: "November 5 - 8 2026",
+    time: "",
+    description: "Main anniversary convention with powerful messages and worship.",
+    image: "/images/anniversary/five.jpg",
+  },
+  {
+    title: "House Visit",
+    date: "Throughout Month",
+    time: "",
+    description: "Pastoral visits to homes for prayer, fellowship, and encouragement.",
     image: "/images/anniversary/six.jpg",
   },
 ];
