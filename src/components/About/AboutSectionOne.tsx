@@ -34,14 +34,14 @@ const AboutSectionOne = () => {
                   You&lsquo;ll find that we give great importance to the learning of the Word. We have Sunday School classes for both the adults, youngsters and kids. We have such a wonderful and talented dynamic praise and worship team. Our goal is to minister to each and every person in your family, no matter what age they may be.
                 </p>
                 <p>
-                  We have been in existence in Garland, TX since 1996 and it is our desire to serve the community faithfully and lift up His Name.
+                  Since 1996, we have faithfully served in Garland, TX, and we are now blessed to continue our journey in Rowlett, lifting up His Name and serving the community.
                 </p>
                 <p>
                   Thank You for taking the time to visit us online. Our website is designed to help you acquaint yourself with the many ministries and services that are catered to the needs of your family and community.
                 </p>
                 <p>
                   We would like to welcome you to visit any of our services. We are conveniently located at{" "}
-                  <strong className="text-primary">2915 Broadway Blvd, Garland, TX.</strong>
+                  <strong className="text-primary">7200 Rowlett Rd, Rowlett, Texas</strong>
                 </p>
                 <p className="text-lg font-semibold text-primary">
                   We would love to have you come and worship the Lord with us. Come and be blessed!

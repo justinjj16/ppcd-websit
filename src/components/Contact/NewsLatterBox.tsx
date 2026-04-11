@@ -52,8 +52,8 @@ const NewsLatterBox = () => {
             className="h-5 w-5"
           />
           <div>
-            <p>2915 Broadway Blvd,</p>
-            <p>Garland, TX</p>
+            <p>7200 Rowlett Rd,</p>
+            <p>Rowlett, TX</p>
           </div>
         </div>
       </div>
