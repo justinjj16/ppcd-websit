@@ -73,7 +73,7 @@ const Footer = () => {
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-gray-400 md:text-base">
               The LORD is my shepherd, I shall not be in want. He restores my soul.
-              He guides me in paths of righteousness for His name's sake.
+              He guides me in paths of righteousness for His name&lsquo;s sake.
             </p>
 
             {/* Social Links */}
