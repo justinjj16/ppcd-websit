@@ -1,211 +1,182 @@
+// src/components/Footer/index.tsx
 "use client";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const quickLinks = [
+    { name: "About", href: "/about" },
+    { name: "Watch", href: "/watch" },
+    { name: "Give", href: "/give" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+  const resourcesLinks = [
+    { name: "Vision", href: "/vision" },
+    { name: "Believe", href: "/believe" },
+    { name: "Leadership", href: "/leadership" },
+    { name: "Articles", href: "/articles" },
+  ];
+
+  const socialLinks = [
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/profile.php?id=61565121380657",
+      icon: (
+        <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879v-6.99h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.99C18.343 21.128 22 16.991 22 12z" />
+        </svg>
+      ),
+    },
+    {
+      name: "YouTube",
+      href: "https://www.youtube.com/@PPCDChurch",
+      icon: (
+        <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.376.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.376-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+        </svg>
+      ),
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/philadelphiachurchdallas",
+      icon: (
+        <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072c-4.358.2-6.78 2.618-6.98 6.98C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162z" />
+        </svg>
+      ),
+    },
+  ];
+
   return (
-    <>
-      <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
-              <div className="mb-4 w-20 max-w-full px-4 sm:w-28 lg:mb-8 xl:mr-12">
-                <Link href="/" className="header-logo block w-full pt-4">
-                  <Image
-                    src="/images/logo/logo-2.svg"
-                    alt="logo"
-                    width="0"
-                    height="0"
-                    sizes="100vw"
-                    style={{ width: "100%", height: "auto" }}
-                    className=" dark:hidden"
-                  />
-                  <Image
-                    src="/images/logo/logo.svg"
-                    alt="logo"
-                    width="0"
-                    height="0"
-                    sizes="100vw"
-                    style={{ width: "100%", height: "auto" }}
-                    className="hidden dark:block"
-                  />
-                </Link>
-              </div>
+    <footer className="relative bg-gray-900 pt-16 text-white md:pt-20 lg:pt-24">
+      {/* Top Decorative Line */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
 
-              <div className="">
-                <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  The LORD is my shepherd, I shall not be in want. he restores
-                  my soul. He guides me in paths of righteousness for his
-                  name&lsquo;s sake.
-                </p>
-                <div className="flex items-center justify-center">
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61565121380657"
-                    aria-label="social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                  >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12.1 10.4939V7.42705C12.1 6.23984 13.085 5.27741 14.3 5.27741H16.5V2.05296L13.5135 1.84452C10.9664 1.66676 8.8 3.63781 8.8 6.13287V10.4939H5.5V13.7183H8.8V20.1667H12.1V13.7183H15.4L16.5 10.4939H12.1Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </a>
-                  {/* <a
-                    href="/"
-                    aria-label="social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                  >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M13.9831 19.25L9.82094 13.3176L4.61058 19.25H2.40625L8.843 11.9233L2.40625 2.75H8.06572L11.9884 8.34127L16.9034 2.75H19.1077L12.9697 9.73737L19.6425 19.25H13.9831ZM16.4378 17.5775H14.9538L5.56249 4.42252H7.04674L10.808 9.6899L11.4584 10.6039L16.4378 17.5775Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </a> */}
-                  <a
-                    href="https://www.youtube.com/@PPCDChurch"
-                    aria-label="social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                  >
-                    <svg
-                      width="18"
-                      height="14"
-                      viewBox="0 0 18 14"
-                      className="fill-current"
-                    >
-                      <path d="M17.5058 2.07119C17.3068 1.2488 16.7099 0.609173 15.9423 0.395963C14.5778 7.26191e-08 9.0627 0 9.0627 0C9.0627 0 3.54766 7.26191e-08 2.18311 0.395963C1.41555 0.609173 0.818561 1.2488 0.619565 2.07119C0.25 3.56366 0.25 6.60953 0.25 6.60953C0.25 6.60953 0.25 9.68585 0.619565 11.1479C0.818561 11.9703 1.41555 12.6099 2.18311 12.8231C3.54766 13.2191 9.0627 13.2191 9.0627 13.2191C9.0627 13.2191 14.5778 13.2191 15.9423 12.8231C16.7099 12.6099 17.3068 11.9703 17.5058 11.1479C17.8754 9.68585 17.8754 6.60953 17.8754 6.60953C17.8754 6.60953 17.8754 3.56366 17.5058 2.07119ZM7.30016 9.44218V3.77687L11.8771 6.60953L7.30016 9.44218Z" />
-                    </svg>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/philadelphiachurchdallas"
-                    aria-label="social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                  >
-                    <svg
-                      className="fill-current"
-                      viewBox="0 0 24 24"
-                      width="24px"
-                      height="24px"
-                    >
-                      {" "}
-                      <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="flex w-full flex-row items-center justify-between px-4 md:w-1/2 lg:w-8/12 xl:w-6/12">
-              <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-                <div className="mb-12 lg:mb-16">
-                  <ul>
-                    <li>
-                      <Link
-                        href="/about"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                      >
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/watch"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                      >
-                        Watch
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/give"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                      >
-                        Give
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+      <div className="container mx-auto px-4">
+        {/* Main Footer Content */}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-12">
+          {/* Logo and Description */}
+          <div className="lg:col-span-5">
+            <Link href="/" className="mb-4 inline-block">
+              <Image
+                src="/images/logo/logo.svg"
+                alt="PPCD Church Logo"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{ width: "auto", height: "50px" }}
+                className="brightness-0 invert"
+              />
+            </Link>
+            <p className="mt-4 text-sm leading-relaxed text-gray-400 md:text-base">
+              The LORD is my shepherd, I shall not be in want. He restores my soul.
+              He guides me in paths of righteousness for His name's sake.
+            </p>
 
-              <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-                <div className="mb-12 lg:mb-16">
-                  <ul>
-                    <li>
-                      <Link
-                        href="/vision"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                      >
-                        Vision
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/believe"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                      >
-                        Believe
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-                <div className="mb-12 lg:mb-16">
-                  <ul>
-                    <li>
-                      <Link
-                        href="/contact"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                      >
-                        Contact
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/articles"
-                        className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                      >
-                        Article
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            {/* Social Links */}
+            <div className="mt-6 flex space-x-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-gray-400 transition-all duration-300 hover:bg-primary hover:text-white"
+                  aria-label={social.name}
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </div>
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
-          <div className="py-4">
-            <p className="text-center text-base text-body-color dark:text-white">
-              © 2026 Philadelphia Pentecostal Church of Dallas. All Rights
-              Reserved.
-            </p>
+
+          {/* Quick Links */}
+          <div className="lg:col-span-2">
+            <h3 className="mb-4 text-lg font-semibold text-white">Quick Links</h3>
+            <ul className="space-y-2">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 transition-colors duration-300 hover:text-primary"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div className="lg:col-span-2">
+            <h3 className="mb-4 text-lg font-semibold text-white">Resources</h3>
+            <ul className="space-y-2">
+              {resourcesLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 transition-colors duration-300 hover:text-primary"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="lg:col-span-3">
+            <h3 className="mb-4 text-lg font-semibold text-white">Contact Us</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start space-x-3">
+                <svg className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span className="text-sm text-gray-400">
+                  7200 Rowlett Rd,<br />
+                  Rowlett, TX 75089
+                </span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <svg className="h-5 w-5 flex-shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span className="text-sm text-gray-400">+1 972 261 6211</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <svg className="h-5 w-5 flex-shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span className="text-sm text-gray-400">ppcdchurch@gmail.com</span>
+              </li>
+            </ul>
           </div>
         </div>
-      </footer>
-    </>
+
+        {/* Divider */}
+        <div className="my-8 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+
+        {/* Bottom Bar */}
+        <div className="flex flex-col items-center justify-between pb-8 text-center md:flex-row md:text-left">
+          <p className="text-sm text-gray-500">
+            © {currentYear} Philadelphia Pentecostal Church of Dallas. All Rights Reserved.
+          </p>
+
+          <div className="mt-4 flex space-x-6 md:mt-0">
+
+          </div>
+        </div>
+      </div>
+
+      {/* Background Pattern */}
+      <div className="pointer-events-none absolute inset-0 opacity-5">
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
+      </div>
+    </footer>
   );
 };
 

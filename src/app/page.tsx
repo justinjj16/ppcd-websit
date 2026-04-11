@@ -6,8 +6,8 @@ import UpcommingEvents from "@/components/UpCommingEvents";
 
 export const metadata = {
   title: "Philadelphia Pentecostal Church of Dallas | A Place to Belong, Believe & Become",
-  description: "Join PPCD Church in Garland, TX - A Bible-based, family-oriented church where you can grow in faith, find community, and experience God's love. Sunday services at 9:30 AM.",
-  keywords: "church Dallas, Pentecostal church Garland, Bible church Texas, worship service, Christian fellowship, Malayalam church Dallas, English church Garland",
+  description: "Join Philadelphia Church in Rowlett, TX - A Bible-based, family-oriented church where you can grow in faith, find community, and experience God's love. Sunday services at 9:30 AM.",
+  keywords: "church Dallas, Pentecostal church Rowlett, Bible church Texas, worship service, Christian fellowship, Malayalam church Dallas, English church Rowlett",
   openGraph: {
     title: "Philadelphia Pentecostal Church of Dallas",
     description: "A place to belong, believe, and become who God created you to be.",

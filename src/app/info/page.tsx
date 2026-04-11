@@ -154,7 +154,7 @@ const HistoryPage = () => {
                   <h3 className="mb-2 text-xl font-bold text-black transition-colors duration-300 group-hover:text-primary dark:text-white">
                     {event.title}
                   </h3>
-                  <p className="mb-3 text-sm font-semibold text-primary">{event.time}</p>
+                  {event.time && (<p className="mb-3 text-sm font-semibold text-primary">{event.time}</p>)}
                   <p className="text-gray-600 dark:text-gray-400">{event.description}</p>
                 </div>
               </div>
@@ -304,71 +304,71 @@ const anniversaryEvents = [
   },
   {
     title: "Public Inauguration: New Church Building",
-    date: "April 04, 2026",
-    time: "6:00 PM",
+    date: "April 25, 2026",
+    time: "10:00 AM",
     description: "Official dedication of our new church building to God’s glory.",
     image: "/images/anniversary/three.jpg",
   },
   {
     title: "First Sunday Service: New Church Building",
-    date: "April 05, 2026",
-    time: "10:00 AM",
+    date: "April 26, 2026",
+    time: "09:30 AM",
     description: "Our first Sunday worship service in the newly inaugurated sanctuary.",
     image: "/images/anniversary/four.jpg",
   },
   {
     title: "Medical Camp",
     date: "May",
-    time: "7:00 PM",
+    // time: "7:00 PM",
     description: "Community outreach providing basic healthcare and support services.",
-    image: "/images/anniversary/five.jpg",
+    image: "/images/anniversary/medicalCamp.jpg",
   },
   {
     title: "Youth Revival Meeting",
     date: "June",
-    time: "10:00 AM",
+    // time: "10:00 AM",
     description: "A refreshing time of worship and revival for the youth community.",
     image: "/images/anniversary/six.jpg",
   },
   {
     title: "Church VBS",
     date: "July",
-    time: "",
+    // time: "",
     description: "Fun-filled Vacation Bible School for children with learning and activities.",
-    image: "/images/anniversary/one.jpg",
+    image: "/images/anniversary/vbs.jpg",
   },
   {
     title: "Gents, Ladies and Youth Meeting & Lunch",
     date: "August",
-    time: "",
+    // time: "",
     description: "Fellowship gathering for all groups followed by a shared meal.",
     image: "/images/anniversary/two.jpg",
   },
   {
     title: "Anish Kollam Bible Study",
     date: "September 10 - 11 2026",
-    time: "",
+    // time: "",
     description: "Special Bible study sessions with guest speaker Anish Kollam.",
-    image: "/images/anniversary/three.jpg",
+    image: "/images/anniversary/five.jpg",
   },
   {
     title: "Musical Night",
     date: "October",
-    time: "",
+    // time: "",
     description: "An evening of worship and music celebrating God’s goodness.",
-    image: "/images/anniversary/four.jpg",
+    image: "/images/anniversary/musicalNight.jpg",
   },
   {
     title: "Pearl Jubilee Convention",
     date: "November 5 - 8 2026",
-    time: "",
+    // time: "",
     description: "Main anniversary convention with powerful messages and worship.",
-    image: "/images/anniversary/five.jpg",
+    image: "/images/anniversary/three.jpg",
   },
   {
     title: "House Visit",
     date: "Throughout Month",
-    time: "",
+    // time: "",
     description: "Pastoral visits to homes for prayer, fellowship, and encouragement.",
     image: "/images/anniversary/six.jpg",
   },

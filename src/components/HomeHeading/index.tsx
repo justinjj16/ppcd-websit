@@ -15,7 +15,7 @@ const Hero = () => {
                   Philadelphia Pentecostal Church of Dallas
                 </h1>
                 <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-2xl md:leading-tight">
-                  2915 Broadway Blvd, Garland, TX
+                  7200 Rowlett Rd, Rowlett, Texas
                 </h3>
 
                 <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-4 shadow-submit md:p-4 lg:p-6 xl:p-8">
