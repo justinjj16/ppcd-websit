@@ -1,7 +1,28 @@
 "use client";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const HomeHero = () => {
+  const [showIndicator, setShowIndicator] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowIndicator(false);
+      } else {
+        setShowIndicator(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToNext = () => {
+    const nextSection = document.getElementById("upcomming-event-section");
+    nextSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="relative min-h-screen overflow-hidden">
       {/* Background Video */}
@@ -52,11 +73,17 @@ const HomeHero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2 animate-bounce">
-        <div className="h-10 w-6 rounded-full border-2 border-white">
-          <div className="mx-auto mt-2 h-2 w-2 rounded-full bg-white"></div>
+      {showIndicator && (
+        <div
+          onClick={scrollToNext}
+          className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2 flex flex-col items-center cursor-pointer animate-bounce transition-opacity duration-500"
+        >
+          <div className="h-10 w-6 rounded-full border-2 border-white flex items-start justify-center">
+            <div className="mt-2 h-2 w-2 rounded-full bg-white animate-pulse"></div>
+          </div>
+          <p className="mt-2 text-xs text-white/80 tracking-wide">Scroll</p>
         </div>
-      </div>
+      )}
     </section>
   );
 };

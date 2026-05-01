@@ -30,7 +30,7 @@ const ServiceTimes = () => {
 
   return (
     <>
-      <section className="py-16 md:py-20 lg:py-24 bg-white dark:bg-gray-900">
+      <section id="upcomming-event-section" className="py-16 md:py-20 lg:py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-black dark:text-white md:text-4xl lg:text-5xl">
