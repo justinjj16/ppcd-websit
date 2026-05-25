@@ -3,7 +3,7 @@ export type UpCommingEvent = {
   icon: string;
   title: string;
   paragraph: string;
-  nextDate: Date;
+  nextDate?: Date;
   details: React.ReactNode;
   redirectNextPageURL: string;
 };

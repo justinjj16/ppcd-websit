@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const isLiveNotification = false;
-  const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(false);
+  const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true);
 
   return (
     <html suppressHydrationWarning lang="en">

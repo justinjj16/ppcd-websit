@@ -95,10 +95,10 @@ const ChurchModal = ({
                     {event.paragraph}
                   </span>
                   <span className="pr-[10px] text-base font-medium leading-relaxed text-body-color">
-                    {event.nextDate.toDateString()}
+                    {event.nextDate?.toDateString()}
                   </span>
                 </div>
-                {}
+                { }
               </div>
               {event.details && (
                 <>
