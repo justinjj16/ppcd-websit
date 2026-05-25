@@ -86,7 +86,9 @@ const ServiceTimes = () => {
                                 ? "Monthly gathering for fellowship and encouragement"
                                 : service.title === "Cottage Meeting"
                                   ? "Intimate home gatherings for prayer and sharing"
-                                  : "Monthly community outreach serving our local neighborhood"
+                                  : service.title === "Vacation Bible School"
+                                    ? "Vacation Bible School"
+                                    : "Monthly community outreach serving our local neighborhood"
                       }
                     </p>
 

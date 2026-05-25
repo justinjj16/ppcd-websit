@@ -1,5 +1,6 @@
 import { UpCommingEvent } from "@/types/upCommingEvent";
 import { NextDay, GetFirstNextFirstDay } from "@/utility/date";
+import Link from "next/link";
 
 const upCommingEventsData: UpCommingEvent[] = [
   {
@@ -142,6 +143,30 @@ const upCommingEventsData: UpCommingEvent[] = [
         </div>
         <p className="text-sm italic text-gray-600 dark:text-gray-400">
           &lsquo;Let your light shine before others, that they may see your good deeds and glorify your Father in heaven.&lsquo; — Matthew 5:16
+        </p>
+      </div>
+    ),
+    redirectNextPageURL: null,
+  },
+  {
+    id: 7,
+    icon: "/images/announcement/vbs.jpeg",
+    title: "Vacation Bible School",
+    paragraph: "June 11 to June 13 - 6:30PM to 9:00PM",
+    nextDate: null,
+    details: (
+      <div className="flex flex-col space-y-3 py-2">
+        <p className="text-gray-700 dark:text-gray-300">
+          Philadelphia Church&lsquo;s Illumination Station VBS 2026
+        </p>
+        <div className="rounded-lg bg-primary/10 p-4">
+          <Link target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfzxvzfx2ZhGAq9kgoWrzGQFMo0A5WYr14WkEED6GvQYkplgQ/viewform">
+            VBS 2026 Registration Form
+          </Link>
+
+        </div>
+        <p className="text-sm italic text-gray-600 dark:text-gray-400">
+          &lsquo;Let the little children come to me, and do not hinder them, for the kingdom of heaven belongs to such as these.&lsquo; — Matthew 19:14
         </p>
       </div>
     ),
