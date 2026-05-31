@@ -17,6 +17,10 @@ const ServiceTimes = () => {
   };
 
   const getNextOccurrence = (event: UpCommingEvent) => {
+
+if(event?.title === "Vacation Bible School"){
+return "June 11 - 13";
+}
     const today = new Date();
     const eventDate = event.nextDate;
 
