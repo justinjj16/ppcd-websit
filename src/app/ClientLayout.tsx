@@ -14,7 +14,7 @@ export default function ClientLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const isLiveNotification = true;
+  const isLiveNotification = false;
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(false);
 
   return (
