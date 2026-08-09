@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Image from "next/image";
-
 import articleData from "@/components/Articles/ArticleData";
 
 export const metadata: Metadata = {
@@ -8,9 +7,11 @@ export const metadata: Metadata = {
   description: "Philadelphia Pentecostal Church of Dallas",
 };
 
-const ArticleDetailsPage = ({ params }: { params: { articleid: string } }) => {
+// Make the component async and await params
+const ArticleDetailsPage = async ({ params }: { params: Promise<{ articleid: string }> }) => {
+  const { articleid } = await params;
   const currentArticle = articleData.find(
-    (article) => article.id === params.articleid,
+    (article) => article.id === articleid,
   );
 
   return (
@@ -33,6 +34,7 @@ const ArticleDetailsPage = ({ params }: { params: { articleid: string } }) => {
                               src={currentArticle.author.image}
                               alt="author"
                               fill
+                              sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                           </div>
                         </div>
@@ -78,23 +80,14 @@ const ArticleDetailsPage = ({ params }: { params: { articleid: string } }) => {
                     </div>
                   </div>
                   {currentArticle.content}
-
-                  {/* <div className="items-center justify-between sm:flex">
-                    <div className="mb-5">
-                      <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right">
-                        Share this post :
-                      </h5>
-                      <div className="flex items-center sm:justify-end">
-                        <SharePost />
-                      </div>
-                    </div>
-                  </div> */}
                 </div>
               </div>
             </div>
           </div>
         ) : (
-          ""
+          <div className="container text-center">
+            <h2 className="text-2xl font-bold">Article not found</h2>
+          </div>
         )}
       </section>
     </>

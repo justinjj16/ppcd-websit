@@ -67,6 +67,7 @@ const BiographyModal = ({ member, isOpen, onClose }: BiographyModalProps) => {
                 src={member.image}
                 alt={member.name}
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="rounded-lg object-cover"
               />
             </div>
@@ -114,9 +115,9 @@ const BiographyModal = ({ member, isOpen, onClose }: BiographyModalProps) => {
                     src={familyImage}
                     alt={`${member.name} Family`}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="rounded-lg object-cover border-2 border-gray-200 dark:border-gray-700"
                     priority
-                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
                   />
                 </div>
                 <p className="mt-4 text-center text-gray-600 dark:text-gray-400 text-sm italic">

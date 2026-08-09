@@ -22,6 +22,7 @@ const articleData: Article[] = [
               src="/images/article/artical-bible.jpg"
               alt="image"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center"
             />
           </div>
@@ -123,6 +124,7 @@ const articleData: Article[] = [
               src="/images/article/artical-worship.jpg"
               alt="image"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center"
             />
           </div>

@@ -20,7 +20,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const isLiveNotification = false;
+  const isLiveNotification = true;
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(false);
 
   return (

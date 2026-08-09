@@ -2,12 +2,12 @@ import { VideoType } from "@/types/video";
 
 const liveVideoData: VideoType[] = [
   {
-    videoId: "V8qgPSn8JPc?si=F0pay3wcBwLkpYQd",
-    isLive: false,
-    title: "Great Is | Song by Elevation Worship",
-    date: "Sep 28, 2024",
+    videoId: "ByvZFcMHUwc",
+    isLive: true,
+    title: "Sunday Worship | Live | Aug 09, 2026 | 09:30 to 12:00",
+    date: "Aug 09, 2026",
     thumbnail: "/images/video/great_is.png",
-    sundayLive: false,
+    sundayLive: true,
   },
 ];
 

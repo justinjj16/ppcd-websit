@@ -1,19 +1,15 @@
-import { Metadata } from "next";
+"use client";
+
 import dynamic from "next/dynamic";
 import Loading from "@/components/Loading";
-
 import { liveVideoData, videoData } from "@/components/Video/videoData";
 
 const Video = dynamic(() => import("../../../components/Video/index"), {
   ssr: false,
 });
 
-export const metadata: Metadata = {
-  title: "watch Page | Philadelphia Pentecostal Church of Dallas",
-  description:
-    "ppcd watch | Philadelphia Pentecostal Church of Dallas | videos | live",
-  // other metadata
-};
+// Note: Metadata can't be exported from client components
+// Remove the metadata export and use a different approach for SEO
 
 const WatchPage = ({ params }: { params: { videoId: string } }) => {
   let selectedVideo = videoData.find(
@@ -35,6 +31,7 @@ const WatchPage = ({ params }: { params: { videoId: string } }) => {
       }
     }
   }
+
   return (
     <>
       <div className="pt-16"></div>
