@@ -1,28 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // images: {
-    //   domains: ["localhost"],
-    //   remotePatterns: [
-    //     {
-    //       protocol: "http",
-    //       hostname: "cdn.sanity.io",
-    //       port: "",
-    //     },
-    //   ],
-    // },
-    // experimental:{
-    //   images:{
-    //     allowFutureImage: true
-    //   }
-    // }
-    webpack(config) {
-      config.module.rules.push({
-        test: /pdf\.worker\.min\.js$/,
-        type: 'asset/resource',
-      });
-      return config;
-    },
-  };
-  
-  module.exports = nextConfig;
-  
+  images: {
+      remotePatterns: [
+          {
+              protocol: "https",
+              hostname: "cdn.sanity.io",
+              port: "",
+          },
+      ],
+  },
+  // Add this to fix the error
+  turbopack: {},
+};
+
+module.exports = nextConfig;

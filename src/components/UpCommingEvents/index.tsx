@@ -18,9 +18,9 @@ const ServiceTimes = () => {
 
   const getNextOccurrence = (event: UpCommingEvent) => {
 
-if(event?.title === "Vacation Bible School"){
-return "June 11 - 13";
-}
+    if (event?.title === "Vacation Bible School") {
+      return "June 11 - 13";
+    }
     const today = new Date();
     const eventDate = event.nextDate;
 
@@ -59,6 +59,7 @@ return "June 11 - 13";
                       src={service.icon}
                       alt={service.title}
                       fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>

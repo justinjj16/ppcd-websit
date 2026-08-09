@@ -14,12 +14,14 @@ const AboutSectionTwo = () => {
                 src="/images/upcomingEvents/worship.jpg"
                 alt="about image"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="rounded-3xl drop-shadow-three dark:hidden dark:drop-shadow-none"
               />
               <Image
                 src="/images/upcomingEvents/worship.jpg"
                 alt="about image"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="hidden rounded-3xl drop-shadow-three dark:block dark:drop-shadow-none"
               />
             </div>
