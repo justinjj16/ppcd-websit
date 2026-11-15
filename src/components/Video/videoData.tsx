@@ -2,10 +2,10 @@ import { VideoType } from "@/types/video";
 
 const liveVideoData: VideoType[] = [
   {
-    videoId: "RHOAGVIVZJK",
+    videoId: "GqLftoHT_po",
     isLive: true,
-    title: "Sunday Worship | Live | Oct 04, 2026 | 09:30 to 12:00",
-    date: "Oct 04, 2026",
+    title: "Sunday Worship | Live | Nov 15, 2026 | 09:30 to 12:00",
+    date: "Nov 15, 2026",
     thumbnail: "/images/video/great_is.png",
     sundayLive: true,
   },
